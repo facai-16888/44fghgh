@@ -1,0 +1,21 @@
+「视觉手册」在 Toonflow 里到底是什么     3D_chinese_traditional      文件名 README.md
+查了 HBAI-Ltd/Toonflow-app（官方 toonflow.net 桌面端）的源码结构，「新建视觉手册」= 创建一套画风技能包，落盘在 D:\AI\ToonFlow\resources\data/skills/art_skills/<风格名>/，内含：
+
+README.md            ← 视觉手册封面/说明
+prefix.md            ← 风格统一前缀（全局前缀）
+art_prompt/art_character.md            ← 人物基础形象生成
+art_prompt/art_character_derivative.md ← 人物衍生资产
+art_prompt/art_scene.md / art_scene_derivative.md
+art_prompt/art_prop.md / art_prop_derivative.md
+art_prompt/art_storyboard_video.md     ← 视频提示词视觉约束
+driector_skills/director_planning_style.md      ← 国风3D约束技法参考
+driector_skills/director_storyboard_table_style.md ← 分镜表国风3D约束
+images/*.png         ← 示例图（你传的封面就进这里）
+
+
+
+导演手册：
+
+
+D:\AI\ToonFlow\resources\data\skills\story_skills
+
