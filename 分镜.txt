@@ -29,6 +29,8 @@ metaData: director_skills
 | 期待 / 盼望 | 眼神发光，表情鲜活（眉微扬，神态向前：盼=抬眼皮远望、眼神有期盼落点） | 眼神期待，目光闪烁（目光亮而闪烁、眼珠微动捕捉动静，视线朝向所盼方向） | 嘴角上扬，表情生动（唇角欲语微启，身体前倾，指尖或攥衣角） |
 | 决绝 / 坚定 | 神情认真，目光清亮（眉峰平正、面庞端正无犹疑） | 眼神坚定，目光向前（目光向前平直不飘，武生瞪眼之定：眼珠定住、瞳仁聚光视线如剑） | 下巴微抬，表情果敢（下颌微抬，唇线紧抿，眉宇刚毅） |
 
+> 表外情绪推导（映射表仅列十种高发情绪）：出现怒/惧/悲恸/轻蔑/羞涩/威压等时按邻近情绪取面容与眼神词、再叠加眼眉差异词锁定——怒=眉峰骤立、瞪目直视（取凌厉气而眉更竖）；惧=眼睑轻颤、目光闪避、瞳孔微缩（取惊讶眼而收上挑眉）；悲恸=泣容带泪、泪珠将落（忧伤加重向）；轻蔑=半垂眼皮、斜睨下视；羞涩=目光躲闪、颊泛轻红 C7（温柔底而偏躲）；威压=眼皮半压、目光沉稳压迫（端庄向收笑）——禁以邻近情绪原词直替，防情绪扁平失真。
+
 ---
 
 ## 光影氛围词库（国风3D）
@@ -109,7 +111,7 @@ metaData: director_skills
 > ⚠️ Seedream（模式A）**不支持负向提示词**（以平台当前版本接口为准），负向词仅适用于模式B。模式A 通过正向词中的质感锚定和画质锁定来保证画面质量。
 
 模式B（英文）：
-no photorealistic, no realistic photography, no low-poly, no rough modeling, no plastic texture, no harsh lines, no cartoon style, no anime style, no western fantasy, no cyberpunk, no sci-fi, no modern elements, no deformed hands, no extra fingers, no unnatural anatomy, no color cast, no subtitles, no captions, no watermark, no title overlay, no UI text
+no photorealistic, no realistic photography, no low-poly, no rough modeling, no plastic texture, no harsh lines, no cartoon style, no anime style, no western fantasy, no cyberpunk, no sci-fi, no modern elements, no deformed hands, no extra fingers, no unnatural anatomy, no morphing, no body distortion, no extra limbs, no color cast, no subtitles, no captions, no watermark, no title overlay, no UI text
 
 ---
 
@@ -166,7 +168,7 @@ Image [1]: 女子 — 3D古风造型，典雅服饰，国风3D风格（3D半写�
 Medium shot, gentle push-in toward medium close-up, woman in elegant traditional Chinese attire standing before palace, holding lantern, gentle expression with composed inner restraint, soft steady gaze toward the lantern light (gentle eyes shining soft, clear catchlight in the eyes), vermilion palace wall background (traditional Chinese red, weathered base), warm golden key light with window light diffusion, warm golden god rays visible through dusk haze, depth of field blur falling off to the background, gold highlights on lantern and gilded trims, PBR material rendering, high-poly modeling, silk hair strands with natural sheen, Chinese style 3D render, Eastern aesthetics, high detail, no subtitles, no captions, no watermark, no title overlay.
 </shot>
 <negative>
-no photorealistic, no realistic photography, no low-poly, no rough modeling, no plastic texture, no harsh lines, no cartoon style, no anime style, no western fantasy, no cyberpunk, no sci-fi, no modern elements, no deformed hands, no extra fingers, no unnatural anatomy, no color cast, no subtitles, no captions, no watermark, no title overlay, no UI text
+no photorealistic, no realistic photography, no low-poly, no rough modeling, no plastic texture, no harsh lines, no cartoon style, no anime style, no western fantasy, no cyberpunk, no sci-fi, no modern elements, no deformed hands, no extra fingers, no unnatural anatomy, no morphing, no body distortion, no extra limbs, no color cast, no subtitles, no captions, no watermark, no title overlay, no UI text
 </negative>
 ```
 
