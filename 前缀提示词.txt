@@ -16,7 +16,7 @@
 | **一级风格** | 3D仙侠国漫渲染（Chinese Xianxia 3D Animation Style，半写实CG口径） |
 | **二级风格** | 次世代高精度3D建模 · 国漫美化面容（默认东亚汉人骨相：眉骨平缓/眼窝不深/鼻梁挺秀山根不高/下颌温润收敛，禁西化骨相触发词入prompt——高鼻入额/高鼻深目/深邃眼窝/西式棱角下颌/立体混血骨相；契印默认暗色墨玉质感：墨玉=近墨黑带青灰/黛青玉质、内敛低明度、半哑光无镜面高光、仅细润边缘微反光面积≤5%，原文未指定颜色时默认墨玉/黑/暗灰青/黛青 系、禁渲成青绿/翠绿/蓝绿/翡翠/荧光/发光/宝石光/金属光/磷光/夜光/光晕光圈/刺目光斑）· 仙侠东方美学 · 眷思量式影视级CG锚定 |
 | **情感基调** | 典雅大气、意境深远、仙气空灵、华丽精致、威压肃杀（随情节切换） |
-| **质感锚词** | PBR材质渲染、SSS次表面散射皮肤（暖调血色透出、禁冷调漂白/苍灰惨白/过曝压平纹理）、皮肤细微微纹理呼吸感可见、真实布料软垂细褶模拟、根根分明发丝至发梢自然收尖羽化而非融合钝化（单根边界清晰可数不糊片不粘连）、体积光、环境光遮蔽、全局光照、HDR高动态范围、Bloom柔和泛光、景深虚化、灵气光尘、飘带动态 |
+| **质感锚词** | PBR材质渲染、SSS次表面散射皮肤（暖调血色透出、禁冷调漂白/苍灰惨白/过曝压平纹理）、皮肤细微微纹理呼吸感可见、真实布料软垂细褶模拟、根根分明发丝至发梢自然收尖羽化而非融合钝化（单根边界清晰可数不糊片不粘连）、体积光、环境光遮蔽、全局光照、HDR高动态范围、Bloom柔和泛光、景深虚化、灵气光尘、飘带动态；质感细节须以可识别细节词显式落prompt（skin texture visible / fine skin micro-texture / subtle natural pores——半写实CG口径可见极细毛孔、非纪实毛孔汗毛级，口径与投喂纪律同下 X11），禁以"完美/光滑/精致/无瑕"等抽象美颜词充当质感词（抽象美颜词触发模型 beauty bias、磨平细节——行业实测：磨皮塑料感的锅在提示词不在模型，须显式纹理词+结构化负向词压住） |
 
 ---
 
@@ -125,3 +125,4 @@
 | X8 | 严禁「跨镜漂移：换脸、服装变色、发型配饰丢失、法器消失」 |
 | X9 | 严禁「解剖与物理穿帮：多指、畸形五官、漂浮、穿模、人物瞬移」 |
 | X10 | 严禁「网红整容脸模板/欧式混血五官/现代妆容感混入古风面容」，并严禁西化骨相触发词入prompt（高鼻入额/高鼻深目/深邃眼窝/西式棱角下颌/立体混血骨相），凡写骨相一律按东方"挺秀微直/平缓/温润收敛"结构词落词 |
+| X11 | 严禁「反美颜bias投喂缺失」——模型默认美颜/柔焦 bias 是"磨皮哑光娃娃肌+全画面柔焦雾化"的直接成因（行业实测共识：塑料感的锅在提示词而非模型，须以显式纹理正词+结构化负向词压住；"完美/光滑/无瑕/beautiful"等抽象美颜词只会加重 bias，禁用其充当质感词）；凡出图提示词必须随主prompt携带统一负向词块与锁质英文锚词（见下），支持负向词字段的平台（负向词块整体放入负向字段）、不支持负向字段的平台（负向词以"禁止"陈述拼于提示词末尾）一视同仁，禁省略禁截断；若平台带美颜增强/一键美颜类开关须显式关闭或注明不使用；统一负向词块（勿删词；禁加入 no 3D / no anime / no cartoon / no CGI——与本体系3D国漫半写实CG基线自相矛盾，替代以 no 2D anime flat shading / no cel shading）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo；锁质英文锚词（防"no X"只拆不建——正向须同步显式立细节；subtle natural pores 为半写实CG口径可见极细毛孔、非纪实毛孔汗毛级——纪实级仍禁，同本条 X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze, dark jade matte seal with subtle inner glow under 5% rim only |
