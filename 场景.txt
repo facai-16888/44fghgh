@@ -167,4 +167,4 @@ environment concept art, single establishing shot, no people, no characters, no 
 | X12 | 全画面柔焦雾化磨糊（以雾遮细节当氛围、无焦点的整体雾化）；雾只许作内容性氛围元素——雾带/雾幕/天候薄雾分层渲染，近景与焦点处材质纹理仍须锐利清晰（空气透视近实远虚、体积光借云雾介质属合法纵深手段，不在禁列） |
 | X13 | 生态/气候矛盾与建筑水体穿帮（无源死水、沙漠种荷、倒影方向与光源相反、水面无反射） |
 | X14 | 透视/比例/物理穿帮：地平线歪斜、天际线错乱、建筑比例失衡（尺度无参照）、漂浮悬空建筑、穿模叠构 |
-| X15 | 场景出图投喂未携带统一负向词块（同全局前缀X11口径；场景适用子集：plastic look/rough modeling/soft focus/hazy foggy atmosphere/blurry/low quality/flat washed-out lighting/2D anime flat shading/cel shading/text/watermark/logo——皮肤/契印/发丝等人物议题词不适用于无人场景，勿挪用；内容性薄雾/空气透视/体积光介质属合法氛围手段、不属柔焦雾化禁列，同本条X12） |
+| X15 | 场景出图投喂未携带统一负向词块（同全局前缀X11口径；场景适用子集：plastic look/rough modeling/soft focus/hazy foggy atmosphere/blurry/low quality/flat washed-out lighting/2D anime flat shading/cel shading/text/watermark/logo——皮肤/契印/发丝等人物议题词不适用于无人场景，勿挪用；内容性薄雾/空气透视/体积光介质属合法氛围手段、不属柔焦雾化禁列，同本条X12）；但场景内若含角色出场（人景同框/分镜画面带入角色），角色元素的提示词段须按全局前缀 X12 眼神锁神锚词独立投喂（X12 不属于本场景子集禁列范围，角色卡口径与本子集互不替代），含人像特写/全身/分镜特写镜的角色画面未携带 X12 锁神锚词视同角色出图缺漏 |
