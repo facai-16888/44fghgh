@@ -13,8 +13,8 @@ metaData: art_skills
 1. **面容不变** — 叠加后五官必须与底模完全一致，禁止面容偏移/换脸；面部描述词全程恒定（底图/参考图锁脸模，固定seed），妆容只着色不改形，痣/胎记等标志锚点不遮挡不消除
 2. **姿态不变** — 保持底模自然站立姿态、重心与朝向，禁止任何姿态/动作/体态变化（姿态变化会牵动衣褶、发丝与比例变形，破坏叠加参照一致性）
 3. **逐层可控** — 每层独立成段描述、互不污染，便于按层替换与跨层复用（换装不换妆、换发饰不动发型，层间不串词）
-4. **风格统一** — 所有服化元素服从同一美学体系：3D写实渲染管线 + 国漫风格化面容（半写实CG，眷思量式锚定，面容按国漫美化基准执行——上限对标斗罗/斗破剧场版级美型男主，见《art_character》§二；底模面容的利落美型感在叠加时只许精修线条、禁以妆容描线回归西化立体度），次世代建模/PBR物理材质/电影级光影与中国传统色盘贯穿各层
-5. **质感不降** — 叠加后质感标准不低于底模：PBR材质渲染、细节密度对标影视级3D国漫资产，妆面不压肤质、皮肤保留细微微纹理呼吸感（禁过度磨皮哑光娃娃肌/冷调漂白/苍灰惨白/过曝压平纹理）、布料软垂细褶有垂坠厚度（禁挺括浆硬制服感）、金属玉石各具真实反射，禁止塑料蜡像感、贴图模糊与全画面柔焦雾化磨糊（浅景深焦外虚化不在禁列）；发丝保持单根至发梢自然收尖羽化不糊片不粘连，禁成束成片糊块或发梢融合钝化；叠加投喂须随prompt携带《art_character》§八统一负向词块与锁质英文锚词（同全局前缀X11口径），防模型默认美颜/柔焦bias把妆面肤质与布料细节压平
+4. **风格统一** — 所有服化元素服从同一美学体系：3D写实渲染管线 + 国漫风格化面容（半写实CG，眷思量式锚定，面容按国漫美化基准执行（基准底线与禁西化口径见《art_character》§二）——上限对标斗罗/斗破剧场版级美型男主；底模面容的利落美型感在叠加时只许精修线条、禁以妆容描线回归西化立体度），次世代建模/PBR物理材质/电影级光影与中国传统色盘贯穿各层
+5. **质感不降** — 叠加后质感标准不低于底模：PBR材质渲染、细节密度对标影视级3D国漫资产，妆面不压肤质、皮肤保留细微微纹理呼吸感（禁过度磨皮哑光娃娃肌/冷调漂白/苍灰惨白/过曝压平纹理）、布料软垂细褶有垂坠厚度（禁挺括浆硬制服感）、金属玉石各具真实反射，禁止塑料蜡像感、贴图模糊与全画面柔焦雾化磨糊（浅景深焦外虚化不在禁列）；发丝保持单根至发梢自然收尖羽化不糊片不粘连，禁成束成片糊块或发梢融合钝化；叠加投喂须随prompt携带《art_character》§八统一负向词块与锁质英文锚词（同全局前缀X11/X12口径——含 X12 眼神锁神锚词），防模型默认美颜/柔焦bias把妆面肤质与布料细节压平
 6. **纯服化范畴** — 仅叠加 L1 妆容/L2 发型/L3 中衣/L4 主服/L5 配饰五层，禁止引入道具、场景、环境、动作（各属独立资产类型，混入即违例）
 
 ---
@@ -30,7 +30,7 @@ metaData: art_skills
 | L4 | 外衣/主服 | 古风华服/礼服/常服/嫁衣等，主色锁定中国传统色盘编号，纹样刺绣按服饰等级分级 |
 | L5 | 配饰 | 头饰/耳饰/项饰/腰饰/手饰，材质分级金银 + 珠玉 + 流苏 |
 
-> **范畴边界**：人物衍生资产仅包含 L0–L5 层级（服化妆造），不包含道具（伞/剑/扇/书/灯笼等手持物）、场景环境（室内/室外/天气等）、姿态动作（行走/回眸/举手等）。这些属于其他资产类型的范畴。L1 妆容仅作用于五官着色与肤质表现，不改变脸型骨相与标志锚点。
+> **范畴边界**：人物衍生资产仅包含 L0-L5 层级（服化妆造），不包含道具（伞/剑/扇/书/灯笼等手持物）、场景环境（室内/室外/天气等）、姿态动作（行走/回眸/举手等）。这些属于其他资产类型的范畴。L1 妆容仅作用于五官着色与肤质表现，不改变脸型骨相与标志锚点。
 > **服饰状态例外**：血迹/破损/战损/湿透/泥污等"戏用状态"属 L4 主服的状态叠加档（仅作用于衣物，不触及妆容发饰与底模），由剧本原文状态词触发（如"黑衣染血"）、按场次单独产出（回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅），禁混入洁净服化四视图——洁净装=资产主线，战损状态=按场调用档，两套分开不互染。
 
 ---
@@ -85,7 +85,7 @@ metaData: art_skills
 | 项目 | 约束 | 提示词 |
 |---|---|---|
 | 眉部 | 顺着底模眉形轻修，不改变眉型与骨相，线条纤细柔和 | 自然修眉、眉形干净、远山黛向淡扫 |
-| 眼部 | 极淡眼部修饰，强调清透有神（按全局前缀 X12 锁神锚词口径执行——瞳孔有清晰高光落点 1-2 点钟位置单一高光不散乱、虹膜内透可见径向纤维纹理、眼白洁净无血丝、上眼睑紧实不下压不半闭、下眼睑微紧收、目光与镜头方向锁定 viewer eye contact、focused intense gaze 视线聚焦有压迫力；"冷冽/清正/温柔/典雅"为情绪气质，禁渲成 sleepy/empty/tired/half-closed/droopy/lifeless/hollow/vacant gaze 软神态；本表"眼神有神"统一按 X12 锁神锚词口径执行、跨角色跨镜头跨视图不得漂移），禁夸张眼线眼影 | 眼部清透、极淡眼影、眼神有神、瞳孔高光、虹膜纹理、上眼睑紧实、目光聚焦 |
+| 眼部 | 极淡眼部修饰，强调清透有神（按全局前缀 X12 锁神锚词口径执行——瞳孔有清晰高光落点 1-2 点钟位置单一高光不散乱、虹膜内透可见径向纤维纹理、眼白洁净无血丝、上眼睑紧实不下压不半闭、下眼睑微紧收、目光与镜头方向锁定 viewer eye contact、focused intense gaze 视线聚焦有压迫力；"冷冽/清正/温柔/典雅"为情绪气质，禁渲成 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态；本表"眼神有神"统一按 X12 锁神锚词口径执行、跨角色跨镜头跨视图不得漂移），禁夸张眼线眼影 | 眼部清透、极淡眼影、眼神有神、瞳孔高光、虹膜内透可见径向纤维纹理、上眼睑紧实、目光聚焦 |
 | 面颊 | 极淡气色提亮，粉檀色薄晕不重 | 面颊气色自然、薄晕粉檀 |
 | 唇部 | 浅粉或朱红润色，水润不油、不浮色 | 唇色自然润泽、浅粉唇色 |
 | 整体 | 看得出有妆造，但妆感非常轻，妆面与皮肤融为一体 | 基础妆、自然妆感、柔和质感、妆面无浮粉 |
@@ -261,10 +261,10 @@ metaData: art_skills
 
 以角色基础形象四视图为底图/参考图，img2img叠加服化妆造，面部描述词恒定、固定seed锁脸模（换装不换脸），
 3D写实渲染管线+国漫风格化面容，3D半写实国漫，次世代建模，PBR物理材质，SSS次表面散射，国风3D，电影级光影，细节对标影视级3D国漫资产，
-古风{性别}角色四视图设定图，3D渲染，高精建模，8K，超保真
+古风{性别}角色四视图设定图，3D渲染，高精建模，4K级清晰，材质微结构可见
 character design sheet, character turnaround,
 保持基础形象面容/体型/姿态不变（同一张脸），{整体气质},
-【L1·妆容】根据用户线索决策：{基础妆/轻妆/正式妆}；使用 {妆容风格}, 强度档, {眉妆形制词}, {眼妆}, {颊腮}, {唇色}, 通透底肤SSS渲染, 妆面无浮粉,
+【L1·妆容】{妆容风格}, {基础妆/轻妆/正式妆}, {眉妆形制词}, {眼妆}, {颊腮}, {唇色}, 通透底肤SSS渲染, 妆面无浮粉,
 【L2·发型】{造型类型（形制考据词）}, 根根分明真实发丝, 高精度发丝清晰, {发饰：位置+材质+工艺},
 【L3+L4·服饰】{主色（传统色盘）}{形制款式}, 真实布料垂坠, {织金刺绣/纱层叠穿}, 材质微结构清晰, 衣服质感清晰, PBR材质渲染, 层次分明,
 【L5·配饰】{头饰}, {耳饰}, {项饰}, {腰饰},（位置+金银珠玉材质+工艺纹样）,
@@ -272,8 +272,8 @@ character design sheet, character turnaround,
 保持底模自然站立, 素灰纯色背景 #B8B8B8, HDR柔和环境光, 均匀柔光, 无硬阴影无投影,
 四视图一致性, 同一张脸同一妆容同一服装, 同一视平线等比例并置、脚底基线水平对齐头高一致, 3D古风建模清晰, 高精度建模清晰,
 图中不要有任何文字
-统一负向词块（随主prompt整体投喂，支持负向词字段的平台直接放入负向字段、不支持的拼于提示词末尾以"禁止"陈述；勿删词；禁加入no 3D/no anime/no cartoon/no CGI——与本体系3D国漫基线矛盾，替代以no 2D anime flat shading/no cel shading；同《art_character》§八同款、勿改词）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, droopy eyes, half-closed eyes, sleepy eyes, tired eyes, vacant stare, lifeless eyes, hollow gaze, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo
-锁质英文锚词（与中文正词同投喂、压模型默认美颜bias；subtle natural pores 为半写实CG口径极细毛孔、非纪实毛孔汗毛级，对齐全局前缀X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze（按全局前缀 X12 锁神锚词口径执行：at 1-2 o'clock position 单一高光、iris with visible radial fiber texture 虹膜径向纹理、clear sclera no bloodshot 眼白洁净、upper eyelid taut no droop 上眼睑紧实、lower eyelid firm 下眼睑微紧收、focused intense gaze toward viewer 目光锁定镜头、locked eye contact 视线方向一致、alert piercing eyes 警觉锐目；"丹凤眼冷冽清正/温柔/典雅"≠无神、禁 sleepy/empty/half-closed/tired/droopy/lifeless/hollow/vacant gaze 软神态，与现有 dead eyes/blank stare 互补覆盖无神空焦全谱），{印记英文锚词随印记锚行类型+色相联动——印记锚行落具体类型（契印/旧疤/胎记/身份标识/纹章等不限）+指定色（"X色印记"→X色对应英文锚词）时此处同落该色词与类型；印记锚行未指定色相/类型时此处为 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views
+统一负向词块（随主prompt整体投喂，支持负向词字段的平台直接放入负向字段、不支持的拼于提示词末尾以"禁止"陈述；勿删词；禁加入no 3D/no anime/no cartoon/no CGI——与本体系3D国漫基线矛盾，替代以no 2D anime flat shading/no cel shading；同《art_character》§八同款、勿改词）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo, droopy eyes, half-closed eyes, sleepy eyes, tired eyes, vacant stare, lifeless eyes, hollow gaze
+锁质英文锚词（与中文正词同投喂、压模型默认美颜bias；subtle natural pores 为半写实CG口径极细毛孔、非纪实毛孔汗毛级，对齐全局前缀X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze（按全局前缀 X12 锁神锚词口径执行：at 1-2 o'clock position 单一高光、iris with visible radial fiber texture 虹膜内透可见径向纤维纹理、clear sclera no bloodshot 眼白洁净、upper eyelid taut no droop 上眼睑紧实、lower eyelid firm 下眼睑微紧收、focused intense gaze toward viewer 目光锁定镜头、locked eye contact 视线方向一致、alert piercing eyes 警觉锐目；"丹凤眼冷冽清正/温柔/典雅"≠无神、禁 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态，与现有 dead eyes/blank stare 互补覆盖无神空焦全谱），{印记英文锚词随印记锚行类型+色相联动——印记锚行落具体类型（契印/旧疤/胎记/身份标识/纹章等不限）+指定色（"X色印记"→X色对应英文锚词）时此处同落该色词与类型；印记锚行未指定色相/类型时此处为 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views
 
 ---
 
@@ -325,5 +325,5 @@ character design sheet, character turnaround,
 | X16 | 跨朝代/西式服饰形制混搭（唐髻配西式胸衣、现代剪裁乱入），形制须服从国风古装体系 |
 | X17 | 妆容只写风格品名、缺眉/眼/颊/唇部位落词，导致渲染无妆感或乱妆 |
 | X18 | 叠加后底模脸模/体型/姿态漂移未复核即输出，导致衍生资产与底模断连 |
-| X19 | 洁净服化四视图混入戏用状态，或戏用状态档丢失因果/位置/出血位而照搬洁净基线，导致角色与场景错位（角色卡洁净底模≠该镜当前状态，戏用状态只在分镜表画面描述与分镜提示词中按场生效，跨场接续仍依分镜表连戏纪律随因果推进——分层职责见角色衍生 §二/§三/L4 主服状态档联动） |
-| X20 | 叠加投喂未携带统一负向词块与锁质英文锚词（同《art_character》§八/§九X14与全局前缀X11/X12口径；X12 眼神锁神锚词=瞳孔高光落点+虹膜径向纹理+眼睑紧实+目光锁定的全套锚词，凡含人像特写/全身/分镜特写镜的画面未携带即视同缺漏），妆面/肤质/眼神被模型默认美颜/无神 bias 压平（哑光娃娃肌/柔焦雾化/发糊布糊/印记贴纸化/眼神无神空焦眼皮半闭），判同X17级返工；输出时负向词块与锁质锚词（含 X11 锁质+ X12 锁神）必须随主prompt成块附带、禁省略禁截断 |
+| X19 | 洁净服化四视图混入戏用状态，或戏用状态档丢失因果/位置/出血位而照搬洁净基线，导致角色与场景错位（角色卡洁净底模≠该镜当前状态，戏用状态只在分镜表画面描述与分镜提示词中按场生效，跨场接续仍依分镜表连戏纪律随因果推进——分层职责见角色衍生 §二 叠加层级与 §五 服饰约束（L3+L4 主服状态档）联动） |
+| X20 | 叠加投喂未携带统一负向词块与锁质英文锚词（同《art_character》§八/§九X14与全局前缀X11/X12口径；X12 眼神锁神锚词=瞳孔高光落点+虹膜内透可见径向纤维纹理+眼睑紧实+目光锁定的全套锚词，凡含人像特写/全身/分镜特写镜的画面未携带即视同缺漏），妆面/肤质/眼神被模型默认美颜/无神 bias 压平（哑光娃娃肌/柔焦雾化/发糊布糊/印记贴纸化/眼神无神空焦眼皮半闭），判同X17级返工；输出时负向词块与锁质锚词（含 X11 锁质+ X12 锁神）必须随主prompt成块附带、禁省略禁截断 |

@@ -95,6 +95,8 @@ metaData: art_skills
 材质纹理超清晰，PBR材质渲染，状态细节可辨
 图中不要有任何文字，
 画面中不能出现任何人物、手部、手指、肢体，道具不可处于被握持或佩戴状态
+统一负向词块（随主prompt整体投喂，支持负向词字段的平台直接放入负向字段、不支持的拼于提示词末尾以「禁止」陈述；纯道具静物按全局前缀X11「无人/纯器物场景豁免」条落场景档子集、勿整表挪用，子集清单以《art_scene》X15为唯一权威；损伤与做旧变体为玉器/符印/金属/布料高发误渲对象，务必含 neon glow on seal, mirror specular on seal, flat black cloth slab 三项）：plastic look, plastic doll look, rough modeling, soft focus, hazy foggy atmosphere, blurry, low quality, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo
+锁质英文锚词（与上述中文正词同投喂、按器物向取用，同全局前缀X11）：fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, clearly visible
 
 ---
 
@@ -112,6 +114,7 @@ metaData: art_skills
 | R6 | 状态须以可落图的变化词描述（材质变化+损伤形态+分布部位），禁只写状态名无视觉落点 |
 | R7 | 状态对比图各状态须逐一对应关系清晰，角度/光线/背景完全一致，仅状态层差异 |
 | R8 | 输出前复核五项：造型可识别/状态可读/无人物肢体/无佩戴使用态/无文字 |
+| R9 | 必须携带统一负向词块与器物向锁质英文锚词（纯道具静物按全局前缀 X11「无人/纯器物场景豁免」条落场景档子集、清单以《art_scene》X15 为唯一权威；输出时成块附带、禁省略禁截断） |
 
 ### 严禁
 
@@ -126,4 +129,5 @@ metaData: art_skills
 | X7 | 借状态变体改道具设计：换款/换形/换纹样/增减件数，导致与设定图断连 |
 | X8 | 状态只写品名无视觉落点（缺材质变化/损伤形态/分布部位），AI 无法落图或乱渲 |
 | X9 | 状态过度堆叠（全材质同时烂到极致、做旧贴图噪声淹没本体辨识），单状态只演单层变化 |
-| X10 | 材质肌理错误（抛光面长锈斑无划痕、新釉面起深冲线、木器烧焦如纸般卷曲等肌理与材质错位） |
+| X10 | 出图投喂未携带统一负向词块与器物向锁质英文锚词（本表 X 编号为手册局部编号、与全局前缀同名编号不同义——本表 X10 即全局前缀 X11 投喂条；同全局前缀X11「无人/纯器物场景豁免」条与《art_scene》X15 口径；漏投=整图柔焦雾化糊化+材质塑料化的直接成因，画面须锐利干净、焦点明确） |
+| X11 | 材质肌理错误（抛光面长锈斑无划痕、新釉面起深冲线、木器烧焦如纸般卷曲等肌理与材质错位） |
