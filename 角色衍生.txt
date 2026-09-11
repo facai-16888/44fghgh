@@ -30,7 +30,7 @@ metaData: art_skills
 | L4 | 外衣/主服 | 古风华服/礼服/常服/嫁衣等，主色锁定中国传统色盘编号，纹样刺绣按服饰等级分级 |
 | L5 | 配饰 | 头饰/耳饰/项饰/腰饰/手饰，材质分级金银 + 珠玉 + 流苏 |
 
-> **范畴边界**：人物衍生资产仅包含 L0-L5 层级（服化妆造），不包含道具（伞/剑/扇/书/灯笼等手持物）、场景环境（室内/室外/天气等）、姿态动作（行走/回眸/举手等）。这些属于其他资产类型的范畴。L1 妆容仅作用于五官着色与肤质表现，不改变脸型骨相与标志锚点。（非人角色的兽形衍生口径见 §十一，兽具层 L1-L5 与人物服化层 L1-L5 两套分开、不互染。）
+> **范畴边界**：人物衍生资产仅包含 L0-L5 层级（服化妆造），不包含道具（伞/剑/扇/书/灯笼等手持物）、场景环境（室内/室外/天气等）、姿态动作（行走/回眸/举手等）。这些属于其他资产类型的范畴。L1 妆容仅作用于五官着色与肤质表现，不改变脸型骨相与标志锚点。（非人角色的兽形衍生口径见 §十一，兽具层 L1-L5 与人物服化层 L1-L5 两套分开、不互染；非实体影像类角色见《art_character》§十二，无肉身载体，服化妆造层 L0-L5 不适用。）
 > **服饰状态例外**：血迹/破损/战损/湿透/泥污等"戏用状态"属 L4 主服的状态叠加档（仅作用于衣物，不触及妆容发饰与底模），由剧本原文状态词触发（如"黑衣染血"）、按场次单独产出（回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅），禁混入洁净服化四视图——洁净装=资产主线，战损状态=按场调用档，两套分开不互染。
 
 ---
@@ -60,6 +60,17 @@ metaData: art_skills
 | 明确正式仪式线索 | 大婚、典礼、重要场合 | 正式妆（精致华贵，按场合落贵气妆/盛妆矩阵） |
 
 > 判定原则：所有衍生资产都要有妆造；先看面部线索决定强度与风格，道具、场景、姿态变化不得单独抬高妆容强度；同角色妆容气质跨场景沿用同一基线，禁现代浓妆/网红整容脸混入古风妆面。
+
+### 风格档继承（A/B 面容基因）
+
+> 本节承接《全局美学基础》§四「A/B 双面容基因档」。衍生资产只**继承**档位、不得另立档位：角色卡定档（A 型·写实倾向档 / B 型·风格化倾向档）后，本手册所有妆造以该档位为材质与光影组织口径——妆容只着色、光影只按档位组织，二者均不得改动骨相与五官体量（对齐本条 X15「妆容只着色不改骨相」）。
+
+| 项目 | A 型 · 写实倾向档 | B 型 · 风格化倾向档 |
+|---|---|---|
+| 妆容笔触 | 妆感隐于肤——晕染边界柔和无痕，眉笔/眼线线条可辨但不硬切 | 线条更利落可辨，眼线与眉形收尾更清晰，妆面块面界限更明确 |
+| 底肤承载 | 实物级肤质：妆下仍见细微微纹理与极细毛孔，SSS 透出血色 | 概括级肤质：粉妆更匀整、光泽更均匀，毛孔层级下调而纹理仍在 |
+| 配饰表现 | 工艺细节密度高，金属与玉石的内反射与微观磨损可见 | 体块与色阶为先、形制轮廓更利落，做旧做减法 |
+| 锚词纪律 | 锁质/锁神锚词照投不许减（对齐 X20），本档下肤质锚词须完整在场 | 锁质/锁神锚词照投不许减（对齐 X20），本档下不得借"更整"之由省略纹理类锚词 |
 
 ### 女性妆容风格矩阵
 
@@ -261,6 +272,7 @@ metaData: art_skills
 
 以角色基础形象四视图为底图/参考图，img2img叠加服化妆造，面部描述词恒定、固定seed锁脸模（换装不换脸），
 3D写实渲染管线+国漫风格化面容，3D半写实国漫，次世代建模，PBR物理材质，SSS次表面散射，国风3D，电影级光影，细节对标影视级3D国漫资产，
+{面容基因档：A 型·写实倾向档 / B 型·风格化倾向档}，{人物向基因词块（中文与英文同投喂、逐字复用零变体，取自《全局美学基础》§四 4.2；妆容只着色不改骨相、档位只改材质与光影组织方式，本行为新增行、属 §十 R20 强制项——档位继承自 {角色名} 卡、元数据须标注档位来源）},
 古风{性别}角色四视图设定图，3D渲染，高精建模，4K级清晰，材质微结构可见
 character design sheet, character turnaround,
 保持基础形象面容/体型/姿态不变（同一张脸），{整体气质},
@@ -273,7 +285,7 @@ character design sheet, character turnaround,
 四视图一致性, 同一张脸同一妆容同一服装, 同一视平线等比例并置、脚底基线水平对齐头高一致, 3D古风建模清晰, 高精度建模清晰,
 图中不要有任何文字
 统一负向词块（随主prompt整体投喂，支持负向词字段的平台直接放入负向字段、不支持的拼于提示词末尾以"禁止"陈述；勿删词；禁加入no 3D/no anime/no cartoon/no CGI——与本体系3D国漫基线矛盾，替代以no 2D anime flat shading/no cel shading；同《art_character》§八同款、勿改词）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo, droopy eyes, half-closed eyes, sleepy eyes, tired eyes, vacant stare, lifeless eyes, hollow gaze
-锁质英文锚词（与中文正词同投喂、压模型默认美颜bias；subtle natural pores 为半写实CG口径极细毛孔、非纪实毛孔汗毛级，对齐全局前缀X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze（按全局前缀 X12 锁神锚词口径执行：at 1-2 o'clock position 单一高光、iris with visible radial fiber texture 虹膜内透可见径向纤维纹理、clear sclera no bloodshot 眼白洁净、upper eyelid taut no droop 上眼睑紧实、lower eyelid firm 下眼睑微紧收、focused intense gaze toward viewer 目光锁定镜头、locked eye contact 视线方向一致、alert piercing eyes 警觉锐目；"丹凤眼冷冽清正/温柔/典雅"≠无神、禁 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态，与现有 dead eyes/blank stare 互补覆盖无神空焦全谱），{印记英文锚词随印记锚行类型+色相联动——印记锚行落具体类型（契印/旧疤/胎记/身份标识/纹章等不限）+指定色（"X色印记"→X色对应英文锚词）时此处同落该色词与类型；印记锚行未指定色相/类型时此处为 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views
+锁质英文锚词（与中文正词同投喂、压模型默认美颜bias；subtle natural pores 为半写实CG口径极细毛孔、非纪实毛孔汗毛级，对齐全局前缀X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze（按全局前缀 X12 锁神锚词口径执行：at 1-2 o'clock position, single clear catchlight（单一高光不散乱不漂移）、iris with visible radial fiber texture 虹膜内透可见径向纤维纹理、clear sclera no bloodshot 眼白洁净、upper eyelid taut no droop 上眼睑紧实、lower eyelid firm 下眼睑微紧收、focused intense gaze toward viewer 目光锁定镜头、locked eye contact 视线方向一致、alert piercing eyes 警觉锐目（锚词串按全局前缀 X12 逐字同序、禁截断禁改写）；"丹凤眼冷冽清正/温柔/典雅"≠无神、禁 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态，与现有 dead eyes/blank stare 互补覆盖无神空焦全谱），{印记英文锚词随印记锚行类型+色相联动——印记锚行落具体类型（契印/旧疤/胎记/身份标识/纹章等不限）+指定色（"X色印记"→X色对应英文锚词）时此处同落该色词与类型；印记锚行未指定色相/类型时此处为 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views
 
 ---
 
@@ -302,6 +314,8 @@ character design sheet, character turnaround,
 | R17 | **妆容不压肤质**——L1 底肤须保持 PBR/SSS 通透质感，妆感再重也不得死白/哑光/浮粉/油光/蜡感 |
 | R18 | **叠加后复核底模锚点**——输出前按同一张脸/同一体型/同一姿态复核，发现脸模或姿势漂移立即重出 |
 | R19 | **戏用状态按场叠加**——剧本写明血迹/破损/战损等状态词时，以 L4 主服状态档单独叠加呈现（回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅与大面积浸染），洁净装资产与战损档两套分开、不互染 |
+| R20 | **风格档继承强制项** — 衍生资产必须继承角色卡登记的档位代号（A 型·写实倾向档 / B 型·风格化倾向档）并在提示词中显式声明，元数据须标注档位来源（格式「继承自 {角色名} 卡」，与该角色卡登记一致），携带《全局美学基础》§四 4.2 对应**人物向**整块基因词块（中英同投喂；妆容只着色不改骨相，档位只改材质与光影组织方式），未声明、缺来源标注或改档即判不合格（对齐全局前缀 R10/R14） |
+| R21 | **档位与妆造互不越权** — 档位不得被用来抬高或降低妆容强度（强度档只由 L1 线索决策），妆容也不得被用来伪装档位（以重妆掩盖 B 档结构、或以裸妆掩盖 A 档质感缺失） |
 
 ### 严禁
 
@@ -327,12 +341,16 @@ character design sheet, character turnaround,
 | X18 | 叠加后底模脸模/体型/姿态漂移未复核即输出，导致衍生资产与底模断连 |
 | X19 | 洁净服化四视图混入戏用状态，或戏用状态档丢失因果/位置/出血位而照搬洁净基线，导致角色与场景错位（角色卡洁净底模≠该镜当前状态，戏用状态只在分镜表画面描述与分镜提示词中按场生效，跨场接续仍依分镜表连戏纪律随因果推进——分层职责见角色衍生 §二 叠加层级与 §五 服饰约束（L3+L4 主服状态档）联动） |
 | X20 | 叠加投喂未携带统一负向词块与锁质英文锚词（同《art_character》§八/§九X14与全局前缀X11/X12口径；X12 眼神锁神锚词=瞳孔高光落点+虹膜内透可见径向纤维纹理+眼睑紧实+目光锁定的全套锚词，凡含人像特写/全身/分镜特写镜的画面未携带即视同缺漏），妆面/肤质/眼神被模型默认美颜/无神 bias 压平（哑光娃娃肌/柔焦雾化/发糊布糊/印记贴纸化/眼神无神空焦眼皮半闭），判同X17级返工；输出时负向词块与锁质锚词（含 X11 锁质+ X12 锁神）必须随主prompt成块附带、禁省略禁截断 |
+| X21 | **衍生换档与缺档** — 同一角色的衍生资产换档（A↔B 漂移），或未携带档位代号与对应基因词块（对齐全局前缀 X15 前半句） |
+| X22 | **以风格档越权决定调性** — 用 A/B 档取代情绪色盘与 A-I 光影方案去决定衍生画面的明暗冷暖（档位只管"材质与色彩怎么组织、光影怎么组织"，不管"是明是暗、是冷是暖"，对齐全局前缀 X15 后半句） |
 
 ---
 
 ## 十一、魔兽/异兽/灵兽类 · 非人角色衍生扩展
 
 > 本章为 §一-§十 人类角色服化衍生口径的**非人角色扩展**，用于魔兽/异兽/灵兽/神兽等兽形生物的衍生叠加（兽甲/鞍具/契约纹饰/披挂/铭刻）；人类 L1-L5 服化层（妆容/发型/中衣/主服/配饰）不适用于兽形，兽形按本章 L1-L5 兽具层执行，两套分开、不互染；本章未尽事项一律沿用本手册通用纪律（逐层可控、风格统一、质感不降、四视图一致、统一负向词块与锁质锚词投喂），以下仅列兽形衍生专属差异项。
+>
+> **编号口径**：本章 R/X 编号**续 §十 人类章序连续排布**（人类章 R1-R21 / X1-X22，本章 R22-R35 / X23-X36），本手册内不重号、不跳号；与其他手册的同名局部编号**不同义**，跨手册引用时必须带手册名。档位纪律见本章 R35 与 §十 R20（人类侧）。
 
 ### 叠加原则（兽形）
 
@@ -341,7 +359,7 @@ character design sheet, character turnaround,
 3. **逐层可控** — 每层独立成段描述、互不污染，便于按层替换与跨层复用（换甲不换兽、换鞍不动甲，层间不串词）
 4. **风格统一** — 所有兽具服从同一美学体系：3D写实渲染管线 + 国漫玄幻兽形（半写实CG，眷思量式锚定，《art_character》§十一 兽形基准底线为形制下限），次世代建模/PBR物理材质/电影级光影与中国传统色盘贯穿各层；兽具形制走东方玄幻谱系，禁西式骑士鞍/蒸汽金属件/现代马具与西式奇幻套用
 5. **质感不降** — 叠加后质感标准不低于底模：皮革/金属/角质/织物四类材质光响应各异可辨（皮革哑光起皱有使用感、金属旧化微划痕、角质半透、织物软垂），禁塑料蜡像感、贴图糊块与全画面柔焦雾化磨糊；兽甲边缘与兽体衔接不穿模不浮空；叠加投喂须随prompt携带《art_character》§十一 统一负向词块与锁质英文锚词（同全局前缀X11/X12口径——含 X12 锁神锚词，兽形版），禁省略禁截断
-6. **不遮识别锚点** — 兽甲/披挂/铭刻不得遮挡血脉标记（契纹/异纹/旧疤）、兽冠/角与断牙缺耳的识别锚点，原位清晰可见、跨镜位置恒定（对齐《art_character》§十一 R28）
+6. **不遮识别锚点** — 兽甲/披挂/铭刻不得遮挡血脉标记（契纹/异纹/旧疤）、兽冠/角与断牙缺耳的识别锚点，原位清晰可见、跨镜位置恒定（对齐《art_character》§十一 R31）
 7. **纯兽具范畴** — 仅叠加 L1 兽甲/L2 鞍具/L3 契约封印装具/L4 披挂纹饰/L5 铭刻挂饰五层，禁止引入人物服化层、道具、场景、环境、动作（各属独立资产类型，混入即违例）；兽体自身外观（毛羽鳞甲/兽冠/血脉标记）属底模、不在本章改动范围
 
 ### 叠加层级（兽形）
@@ -356,7 +374,7 @@ character design sheet, character turnaround,
 | L5 | 铭刻/挂饰 | 兽甲铭文/符文錾刻、蹄铁/爪套、兽铃/项圈/挂饰、皮革系带 |
 
 > **基线边界**：自然兽冠（角/鳍/鬃）与基础装具（鞍/笼/契约环）的**素面零装饰基线**属底模（见《art_character》§十一 基础兽冠/角/装具约束），本章只在素面基线上追加成套化形制、纹样、铭刻与垂饰，不反向改写底模基线；底模未声明装具时本章不凭空添加（无来源兽具即自造，判违例）。
-> **兽具状态例外**：兽甲破损/锁链断裂/鞍具染血/焦痕/断甲等"兽用戏用状态"属按场调用档（由剧本原文状态词触发、按场次单独产出，回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅与大面积浸染），洁净兽具四视图=资产主线、战损档=按场调用档，两套分开不互染；底模侧登记口径见《art_character》§十一 R27（兽形卡"造型备注·戏用状态"档）。
+> **兽具状态例外**：兽甲破损/锁链断裂/鞍具染血/焦痕/断甲等"兽用戏用状态"属按场调用档（由剧本原文状态词触发、按场次单独产出，回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅与大面积浸染），洁净兽具四视图=资产主线、战损档=按场调用档，两套分开不互染；底模侧登记口径见《art_character》§十一 R30（兽形卡"造型备注·戏用状态"档）。
 
 ### 兽甲约束（L1）
 
@@ -475,6 +493,7 @@ character design sheet, character turnaround,
 
 以兽形基础形象四视图为底图/参考图，img2img叠加兽具层，骨相/瞳形/毛羽鳞甲描述词恒定、固定seed锁兽形（换甲不换兽），
 3D写实渲染管线+国漫玄幻兽形，3D半写实国漫，次世代建模，PBR物理材质，SSS次表面散射，国风3D，电影级光影，细节对标影视级3D国漫资产，
+{面容基因档：A 型·写实倾向档 / B 型·风格化倾向档}，{基因词块按资产类型分流投喂（中文与英文同投喂、逐字复用零变体，取自《全局美学基础》§四 4.2）：兽具本体（兽甲/鞍具/契约装具/披挂/铭刻）取器物向整块词块，兽体表面（毛羽鳞甲/角质/兽瞳高光）取人物向词块的材质语言与光影语言两项、骨相与五官项以兽形规则覆盖，本行为新增行、属 §十一 R35 强制项——档位继承自 {角色名} · 兽形卡、元数据须标注档位来源）},
 古风{兽种}兽形四视图设定图，3D渲染，高精建模，4K级清晰，材质微结构可见
 character design sheet, creature turnaround, Chinese xianxia beast sheet,
 保持基础形象骨相/毛羽鳞甲/体型/姿态不变（同一头骨同一瞳形）, {整体气质}, {境界档}, {血脉标记（同底模原位同形态、不遮挡不改写）},
@@ -487,8 +506,8 @@ character design sheet, creature turnaround, Chinese xianxia beast sheet,
 保持底模自然站立（四足平行微分、翼尾自然收拢）, 素灰纯色背景 #B8B8B8, HDR柔和环境光, 均匀柔光, 无硬阴影无投影,
 四视图一致性, 同一骨相同一毛羽鳞甲同一兽具, 同一视平线等比例并置、足底基线水平对齐体高一致, 3D玄幻兽形建模清晰, 高精度建模清晰,
 图中不要有任何文字
-统一负向词块（随主prompt整体投喂，支持负向词字段的平台直接放入负向字段、不支持的拼于提示词末尾以"禁止"陈述；勿删词；禁加入no 3D/no anime/no cartoon/no CGI——与本体系3D国漫基线矛盾，替代以no 2D anime flat shading/no cel shading；同《art_character》§十一 兽形模板同款、勿改词）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, flat black cloth slab, photorealistic animal, real wildlife photography, cute cartoon animal, neon glow on seal, mirror specular on seal, glossy toy plastic, text, watermark, logo, droopy eyes, half-closed eyes, sleepy eyes, tired eyes, vacant stare, lifeless eyes, hollow gaze
-锁质英文锚词（与中文正词同投喂、压模型默认美颜bias；subtle natural pores 为半写实CG口径极细纹理、非纪实汗毛级，对齐全局前缀X1）：skin texture visible, fine fur micro-texture, individual hair strands clearly defined and countable, feather barb structure visible, scale overlap micro-texture visible, translucent SSS skin with warm undertone, sharp catchlight in pupils with focused gaze（按全局前缀 X12 锁神锚词口径执行：at 1-2 o'clock position 单一高光、iris with visible radial fiber texture 虹膜内透可见径向纤维纹理、clear sclera no bloodshot 眼白洁净、upper eyelid taut no droop 上眼睑紧实、focused intense gaze toward viewer 目光锁定、locked eye contact 视线方向一致、alert piercing eyes 警觉锐目；"凶戾/威压/祥瑞"为气质，禁渲成无神空焦、禁 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态），{血脉标记英文锚词随底模锚行类型+色相联动——契纹/封印类：{色} matte cursed runic seal branded on {部位}; 旧疤类：{色} healed scar on {部位}; 兽纹类：{色} bloodline pattern on {部位}；未指定时 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views
+统一负向词块（随主prompt整体投喂，支持负向词字段的平台直接放入负向字段、不支持的拼于提示词末尾以"禁止"陈述；勿删词；禁加入no 3D/no anime/no cartoon/no CGI——与本体系3D国漫基线矛盾，替代以no 2D anime flat shading/no cel shading；同《art_character》§十一 兽形模板同款、勿改词）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo, droopy eyes, half-closed eyes, sleepy eyes, tired eyes, vacant stare, lifeless eyes, hollow gaze, photorealistic animal, real wildlife photography, cute cartoon animal, glossy toy plastic
+锁质英文锚词（与中文正词同投喂、压模型默认美颜bias；subtle natural pores 为半写实CG口径极细纹理、非纪实汗毛级，对齐全局前缀X1）：skin texture visible, fine fur micro-texture, individual hair strands clearly defined and countable, feather barb structure visible, scale overlap micro-texture visible, translucent SSS skin with warm undertone, sharp catchlight in pupils with focused gaze（按全局前缀 X12 锁神锚词口径执行：at 1-2 o'clock position, single clear catchlight（单一高光不散乱）、iris with visible radial fiber texture 虹膜内透可见径向纤维纹理（兽瞳瞳型由兽种设定给定、锚词串本身逐字不改）、clear sclera no bloodshot 眼白洁净、upper eyelid taut no droop 上眼睑紧实、lower eyelid firm 下眼睑微紧收（原行漏项补回、锚词串禁截断）、focused intense gaze toward viewer 目光锁定、locked eye contact 视线方向一致、alert piercing eyes 警觉锐目（锚词串按全局前缀 X12 逐字同序、禁截断禁改写）；"凶戾/威压/祥瑞"为气质，禁渲成无神空焦、禁 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态），{血脉标记英文锚词随底模锚行类型+色相联动——契纹/封印类：{色} matte cursed runic seal branded on {部位}; 旧疤类：{色} healed scar on {部位}; 兽纹类：{色} bloodline pattern on {部位}；未指定时 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views
 
 ### 约束规则（兽形衍生）
 
@@ -496,34 +515,36 @@ character design sheet, creature turnaround, Chinese xianxia beast sheet,
 
 | 编号 | 规则 |
 |---|---|
-| R20 | 必须声明底模锁定（兽形底模=《art_character》§十一 产出，骨相/瞳形/毛羽鳞甲/体型不改不重绘） |
-| R21 | 叠加后兽形骨相必须与底模一致（同一头骨/同一瞳形/同一毛羽鳞甲/同一体型比例） |
-| R22 | 姿态必须保持底模自然站立（四足平行微分、翼尾自然收拢），禁止任何动态Pose |
-| R23 | 兽甲/鞍具必须形制考据，材质回查传统色盘（皮革 C8 赭石向、金属 C5 勾金），皮革软垂禁挺括浆硬 |
-| R24 | 契约/封印装具必须按原文类型落词（契约环/锁链/镣铐/镇兽符牌），材质按原文落词回查色盘（金属 C5 勾金向或原文指定暗色金属、玉石墨玉系），纹饰/铭刻面半哑光低明度，禁荧光/发光/宝石光/金属镜面强反光 |
-| R25 | 披挂/纹饰必须与兽甲同源成套（主色材质呼应，禁冲突色），纹样按境界档分档 |
-| R26 | 兽甲/披挂/挂饰不得遮挡血脉标记（契纹/异纹/旧疤）、兽冠/角与断牙缺耳识别锚点，原位清晰可见 |
-| R27 | 必须输出四视图设定图（头部特写+正视图+侧视图+后视图），输出顺序与《art_character》§十一 兽形设定板同构、勿混用编号 |
-| R28 | **禁止场景与道具**——兽形衍生资产不涉及场景/环境/天气/背景叙事与任何手持交互物，场景与道具属独立资产类型 |
-| R29 | **兽具状态按场叠加**——兽甲破损/锁链断裂/鞍具染血等兽用戏用状态以按场调用档单独叠加（回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅与大面积浸染），洁净兽具四视图与战损档两套分开、不互染 |
-| R30 | **L1-L5 兽具层必须先分析再决策**——先按原文/设定解析兽具来源与成套性，再定各层繁度；底模未声明装具时不凭空添加（无来源兽具即自造） |
-| R31 | **提示词模板锁定**——兽形衍生提示词必须按本章模板逐行组句，不得自行删行/合行/跳行；模板中的字段占位符必须替换为具体落词、不得留空泛 |
-| R32 | **叠加后复核底模锚点**——输出前按同一骨相/同一毛羽鳞甲/同一兽冠/同一基础装具/同一血脉标记原位复核，发现骨相或锚点漂移立即重出；叠加投喂必须随主prompt成块携带统一负向词块与锁质英文锚词（含 X11 锁质 + X12 锁神，兽形版），禁省略禁截断 |
+| R22 | 必须声明底模锁定（兽形底模=《art_character》§十一 产出，骨相/瞳形/毛羽鳞甲/体型不改不重绘） |
+| R23 | 叠加后兽形骨相必须与底模一致（同一头骨/同一瞳形/同一毛羽鳞甲/同一体型比例） |
+| R24 | 姿态必须保持底模自然站立（四足平行微分、翼尾自然收拢），禁止任何动态Pose |
+| R25 | 兽甲/鞍具必须形制考据，材质回查传统色盘（皮革 C8 赭石向、金属 C5 勾金），皮革软垂禁挺括浆硬 |
+| R26 | 契约/封印装具必须按原文类型落词（契约环/锁链/镣铐/镇兽符牌），材质按原文落词回查色盘（金属 C5 勾金向或原文指定暗色金属、玉石墨玉系），纹饰/铭刻面半哑光低明度，禁荧光/发光/宝石光/金属镜面强反光 |
+| R27 | 披挂/纹饰必须与兽甲同源成套（主色材质呼应，禁冲突色），纹样按境界档分档 |
+| R28 | 兽甲/披挂/挂饰不得遮挡血脉标记（契纹/异纹/旧疤）、兽冠/角与断牙缺耳识别锚点，原位清晰可见 |
+| R29 | 必须输出四视图设定图（头部特写+正视图+侧视图+后视图），输出顺序与《art_character》§十一 兽形设定板同构、勿混用编号 |
+| R30 | **禁止场景与道具**——兽形衍生资产不涉及场景/环境/天气/背景叙事与任何手持交互物，场景与道具属独立资产类型 |
+| R31 | **兽具状态按场叠加**——兽甲破损/锁链断裂/鞍具染血等兽用戏用状态以按场调用档单独叠加（回查原文状态词与落色：血迹陈旧氧化向 C3/C8、禁鲜红喷溅与大面积浸染），洁净兽具四视图与战损档两套分开、不互染 |
+| R32 | **L1-L5 兽具层必须先分析再决策**——先按原文/设定解析兽具来源与成套性，再定各层繁度；底模未声明装具时不凭空添加（无来源兽具即自造） |
+| R33 | **提示词模板锁定**——兽形衍生提示词必须按本章模板逐行组句，不得自行删行/合行/跳行；模板中的字段占位符必须替换为具体落词、不得留空泛 |
+| R34 | **叠加后复核底模锚点**——输出前按同一骨相/同一毛羽鳞甲/同一兽冠/同一基础装具/同一血脉标记原位复核，发现骨相或锚点漂移立即重出；叠加投喂必须随主prompt成块携带统一负向词块与锁质英文锚词（含 X11 锁质 + X12 锁神，兽形版），禁省略禁截断 |
+| R35 | **兽形档位继承强制项** — 兽形衍生同受档位纪律约束：必须继承《art_character》§十一 兽形卡登记的档位代号并在提示词中显式声明，元数据标注来源「继承自 {角色名} · 兽形卡」；**取词口径按资产类型分流**——兽具本体（兽甲/鞍具/契约装具/披挂/铭刻）取《全局美学基础》§四 4.2 **器物向**整块基因词块，兽体表面（毛羽鳞甲/角质/兽瞳高光）取《全局美学基础》§四 4.2 **人物向**词块中的材质语言与光影语言两项、骨相与五官项一律以兽形规则覆盖、不落人物骨相词；未声明、缺来源标注或改档即判不合格（对齐全局前缀 R13/R14、X16/X17） |
 
 **严禁（兽形衍生）**
 
 | 编号 | 严禁 |
 |---|---|
-| X21 | 叠加后兽形骨相偏移/换头换种 |
-| X22 | 兽具形制现代化或西式奇幻套用（西式骑士鞍/蒸汽金属件/现代马具/西式带翼巨龙装备） |
-| X23 | 兽具纹饰与兽体主色冲突、高饱和抢镜，抢占兽体识别度 |
-| X24 | 兽甲/披挂/挂饰遮挡血脉标记、兽冠/角、断牙缺耳等识别锚点，或以大面披挂吞掉兽体特征 |
-| X25 | 契约/封印装具渲成荧光/发光/宝石光/镜面强反光（须暗色墨玉/低明度金属、半哑光） |
-| X26 | 引入人物 L1-L5 服化层（妆容/发型/中衣/主服/女性配饰）或以人物服化词叠加兽形 |
-| X27 | 加入场景描述（街景/雨景/室内/天气等环境元素） |
-| X28 | 加入道具交互（火焰/法宝/兵器/食物等）与姿态变化（扑咬/振翅/奔袭/低头/转头等） |
-| X29 | 洁净兽具四视图混入戏用状态，或战损档丢失因果/位置/破损位而照搬洁净基线，导致兽体与场景错位（分层职责见本章 §十一 叠加层级（兽形）与契约/封印装具约束联动） |
-| X30 | 输出提示词以外的任何内容（表格/方案/建议/解释/变体等） |
-| X31 | 混入2D平涂/手绘厚涂/日系二次元/三渲二/韩漫/写实野生动物摄影/欧美怪兽电影CG等非国漫3D基底特征 |
-| X32 | 兽具塑料玩具质感/贴图糊块/低模硬边/兽甲穿模浮空，或图中出现任何文字、水印、logo、标注 |
-| X33 | 反美颜bias投喂不完整——兽形衍生提示词未携带 §十一 统一负向词块与锁质英文锚词即投喂（同全局前缀X11/X12口径），毛羽/兽甲/金属被模型默认美颜/柔焦bias压平（哑光糊块/柔焦雾化/皮革贴片化/金属死板无反射），判同X32级返工 |
+| X23 | 叠加后兽形骨相偏移/换头换种 |
+| X24 | 兽具形制现代化或西式奇幻套用（西式骑士鞍/蒸汽金属件/现代马具/西式带翼巨龙装备） |
+| X25 | 兽具纹饰与兽体主色冲突、高饱和抢镜，抢占兽体识别度 |
+| X26 | 兽甲/披挂/挂饰遮挡血脉标记、兽冠/角、断牙缺耳等识别锚点，或以大面披挂吞掉兽体特征 |
+| X27 | 契约/封印装具渲成荧光/发光/宝石光/镜面强反光（须暗色墨玉/低明度金属、半哑光） |
+| X28 | 引入人物 L1-L5 服化层（妆容/发型/中衣/主服/女性配饰）或以人物服化词叠加兽形 |
+| X29 | 加入场景描述（街景/雨景/室内/天气等环境元素） |
+| X30 | 加入道具交互（火焰/法宝/兵器/食物等）与姿态变化（扑咬/振翅/奔袭/低头/转头等） |
+| X31 | 洁净兽具四视图混入戏用状态，或战损档丢失因果/位置/破损位而照搬洁净基线，导致兽体与场景错位（分层职责见本章 §十一 叠加层级（兽形）与契约/封印装具约束联动） |
+| X32 | 输出提示词以外的任何内容（表格/方案/建议/解释/变体等） |
+| X33 | 混入2D平涂/手绘厚涂/日系二次元/三渲二/韩漫/写实野生动物摄影/欧美怪兽电影CG等非国漫3D基底特征 |
+| X34 | 兽具塑料玩具质感/贴图糊块/低模硬边/兽甲穿模浮空，或图中出现任何文字、水印、logo、标注 |
+| X35 | 反美颜bias投喂不完整——兽形衍生提示词未携带 §十一 统一负向词块与锁质英文锚词即投喂（同全局前缀X11/X12口径），毛羽/兽甲/金属被模型默认美颜/柔焦bias压平（哑光糊块/柔焦雾化/皮革贴片化/金属死板无反射），判同X34级返工 |
+| X36 | 兽形衍生档位缺档与来源缺失——未携带档位代号、未标注档位来源、跨场换档（A↔B 漂移），或兽具本体未按《全局美学基础》§四 4.2 器物向词块取词致兽具贴纸化（对齐全局前缀 X16/X17） |

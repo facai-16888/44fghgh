@@ -17,6 +17,7 @@
 | **二级风格** | 次世代高精度3D建模 · 国漫美化面容（默认东亚汉人骨相：眉骨平缓/眼窝不深/鼻梁挺秀山根不高/下颌温润收敛，禁西化骨相触发词入prompt——高鼻入额/高鼻深目/深邃眼窝/西式棱角下颌/立体混血骨相；契印默认暗色墨玉质感：墨玉=近墨黑带青灰/黛青玉质、内敛低明度、半哑光无镜面高光、仅细润边缘微反光面积≤5%，原文未指定颜色时默认墨玉/黑/暗灰青/黛青 系、禁渲成青绿/翠绿/蓝绿/翡翠/荧光/发光/宝石光/金属光/磷光/夜光/光晕光圈/刺目光斑）· 仙侠东方美学 · 眷思量式影视级CG锚定 |
 | **情感基调** | 典雅大气、意境深远、仙气空灵、华丽精致、威压肃杀（随情节切换） |
 | **质感锚词** | PBR材质渲染、SSS次表面散射皮肤（暖调血色透出、禁冷调漂白/苍灰惨白/过曝压平纹理）、皮肤细微微纹理呼吸感可见、真实布料软垂细褶模拟、根根分明发丝至发梢自然收尖羽化而非融合钝化（单根边界清晰可数不糊片不粘连）、体积光、环境光遮蔽、全局光照、HDR高动态范围、Bloom柔和泛光、景深虚化、灵气光尘、飘带动态；质感细节须以可识别细节词显式落prompt（skin texture visible / fine skin micro-texture / subtle natural pores——半写实CG口径可见极细毛孔、非纪实毛孔汗毛级，口径与投喂纪律同下 X11），禁以"完美/光滑/精致/无瑕"等抽象美颜词充当质感词（抽象美颜词触发模型 beauty bias、磨平细节——行业实测：磨皮塑料感的锅在提示词不在模型，须显式纹理词+结构化负向词压住）；眼神锁神锚词（与 X11 锁质锚词同投喂、压模型默认"无神空焦"bias：模型对"丹凤眼/冷冽"等结构词易读成"细长无神"，"冷"≠"空焦"、"清正"≠"空洞"，须以具象眼神渲染词块显式立"有神"——瞳孔有清晰高光落点 1-2 点钟位置单一高光不散乱、虹膜内透可见径向纤维纹理、眼白洁净无血丝、上眼睑紧实不下压不半闭、下眼睑微紧收、目光与镜头方向锁定 viewer eye contact、focused intense gaze 视线聚焦有压迫力；中性基线档禁眼皮半垂半闭、禁 droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze 软神态；基线/状态双档——剧本/小说明示状态词（垂眸/睥睨/闭目/斜睨/含泪/怒目）时按原文落状态词为状态档，状态档与基线档分档并存不冲突（状态≠无神空焦：垂眸须目光有落点不空洞、睥睨须目光锐利有焦点、含泪须泪光盈睫而瞳孔高光仍在、怒目须瞳仁聚光；状态档只禁"失焦空焦"不禁剧本状态本身），角色参照图/四视图按基线档、分镜/分镜镜头按剧本情绪状态词取状态档，口径与投喂纪律同下 X12） |
+| **面容基因档** | A/B 双档可迁移基因（A 型·写实倾向档 / B 型·风格化倾向档）——只描述"结构处理方式与材质光影组织方式"，不含任何剧情锚点、不作情绪调性；档位由卡片元数据承载并在角色 → 角色衍生 → 分镜 → 分镜视频四环逐级继承，参考图只作观感标尺、其画面内容禁入prompt。完整对照表、整块中英词块与跨模型适配见 §四「A/B 双面容基因档」 |
 
 ---
 
@@ -85,6 +86,10 @@
 | 冰/玄冰法术 | C12 群青 + C1 月白 + C4 靛蓝影部 | 冰晶半透、棱面折射清晰 |
 | 魔兽 / 异兽 | 属性绑定色（火/雷/冰/木/土）回查 C 编号 | 兽口/爪/角/瞳光走属性色，禁高饱和荧光 |
 | 丹药 / 丹火 | C9 藤黄丹火 + C3 朱红/C15 银朱丹纹 | 炼丹火与丹丸色分档 |
+| 黑金焰 / 魔焰（"黑金火焰"） | 焰芯 C3 朱红 或 C15 银朱 + 火晕 C9 藤黄；烟层压 C6 墨黑、边缘勾 C5 金黄 | 焰体分层（亮焰芯＋暗烟层＋勾金边），禁整片死黑——黑焰非纯黑实体、其暗部为不完全燃烧的碳烟遮光层；禁荧光霓虹，光效走 ±20% 特效容差（对齐 X2） |
+| 黑金阵纹 / 魔道阵纹 | 纹线 C5 金黄、底纹 C6 墨黑 | 勾金走纹线、墨黑走底面（阵纹另按《分镜表国风3D约束》结构锚点条作坐标级锁定），跨镜同形同纹、禁自定义 hex |
+
+> **「黑金」口径（2026-09 联网核验）**——传统色彩库（319 色表全量核验）中并无「乌金」「墨玉」单色条目：「黑金」不是传统色单色名、而是"墨黑＋金黄"的复合搭配，故落点一律回查既有编号（C6 墨黑＋C5 金黄），不得新增编号、不得自定义 hex。火焰侧依据为火焰的分层结构与发光机理：火焰由焰心／内焰／外焰分层构成，颜色是黑体辐射（温度）与焰色反应（元素）叠加的结果——明亮的黄光来自碳烟颗粒的高温白炽（soot incandescence，火焰可见光主体），而氧气不足、燃烧不完全的浓烟层呈暗色并遮蔽发光；故"黑金火焰"须落「亮焰芯＋暗烟层＋勾金边」的分层写法，禁整片死黑（会被模型渲成黑色实体块、读成烟尘糊块而非焰）。
 
 ### 色温约束
 
@@ -139,5 +144,200 @@
 | X8 | 严禁「跨镜漂移：换脸、服装变色、发型配饰丢失、法器消失」 |
 | X9 | 严禁「解剖与物理穿帮：多指、畸形五官、漂浮、穿模、人物瞬移」 |
 | X10 | 严禁「网红整容脸模板/欧式混血五官/现代妆容感混入古风面容」，并严禁西化骨相触发词入prompt（高鼻入额/高鼻深目/深邃眼窝/西式棱角下颌/立体混血骨相），凡写骨相一律按东方"挺秀微直/平缓/温润收敛"结构词落词 |
-| X11 | 严禁「反美颜bias投喂缺失」——模型默认美颜/柔焦 bias 是"磨皮哑光娃娃肌+全画面柔焦雾化"的直接成因（行业实测共识：塑料感的锅在提示词而非模型，须以显式纹理正词+结构化负向词压住；"完美/光滑/无瑕/beautiful"等抽象美颜词只会加重 bias，禁用其充当质感词）；凡出图提示词必须随主prompt携带统一负向词块与锁质英文锚词（见下），支持负向词字段的平台（负向词块整体放入负向字段；字段内写法按平台习惯——名词短语为稳，官方负向段惯用自然语言「不要/无…」句式者从其官方示例；同一负向字段内须分块保持单一句式、禁逐词交错混排——体系统一负向词块为名词短语块、不得改写其句式与词序，技能域补充禁项若取其惯用的「no+名词」式，须与统一块前后分列：统一块在前、域补充块在后、块内句式单一）、不支持负向字段的平台（负向词以"禁止"陈述拼于提示词末尾）一视同仁，禁省略禁截断；若平台带美颜增强/一键美颜类开关须显式关闭或注明不使用；统一负向词块（勿删词、勿挪用顺序；禁加入 no 3D / no anime / no cartoon / no CGI——与本体系3D国漫半写实CG基线自相矛盾，替代以 no 2D anime flat shading / no cel shading；投喂预算纪律：负向词逐词受注意力预算摊薄、位次越后边际效用越低（行业实测口径：负向词以十五词内为高效益区），故本全表为人物向完整基线、须成块整投禁静默截断，平台负向字段有长度上限或属语义对齐旗舰模型时改按 X12 平台适配条走实测精简档、先保已观察缺陷词；hazy foggy atmosphere 一职只压「以雾遮细节的全画面低清雾糊」，内容性雾带/雾幕/天候薄雾与空气透视介质不在其禁列——本镜需合法雾气时按 X12 与《art_scene》X15 以正向分层渲染词显式描述，正向引导为主动、负向约束为被动、冲突时正向占优，禁因本词弃写合法雾气）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo；无人/纯器物场景豁免（画面不含人物、皮肤、发丝、契印的场景卡与道具卡）——可改落「场景档子集」：皮肤/面容/发丝/契印类词按语义等价替换（plastic skin→plastic look、smooth plastic doll skin→plastic doll look、blurry face→blurry；mask-like face 与 distorted face 随人物一并省略），保底保留 soft focus、hazy foggy atmosphere、blurry、low quality、overexposure、flat washed-out lighting、2D anime flat shading、cel shading 八项（列举序即随主prompt的投喂序、勿自行重排，同《art_scene》X15）；画面含玉器/符印/金属/布料者于保底八项与末位之间追加 neon glow on seal、mirror specular on seal、flat black cloth slab 三项、末位固定 text、watermark、logo 三项（保底八项＋末位三项合计十一项、三项材料词就位于二者之间）；锁质锚词同步按场景档取用（仅保留 fabric weave micro-texture visible、soft drape folds、dark cloth retains value contrast and contour reflections 等器物向锚词，皮肤/发丝/瞳孔向锚词随人物一并省略）；子集清单与取用口径以《art_scene》X15 为唯一权威，场景与道具衍生手册同口径同清单并须各自显式携带；锁质英文锚词（防"no X"只拆不建——正向须同步显式立细节；subtle natural pores 为半写实CG口径可见极细毛孔、非纪实毛孔汗毛级——纪实级仍禁，同本条 X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze, {印记英文锚词随印记锚行类型+色相联动——印记锚行落具体类型（契印/旧疤/胎记/身份标识/纹章等不限）+指定色（"X色印记"→X色对应英文锚词）时此处同落该色词与类型；印记锚行未指定色相/类型时此处为 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views |
+| X11 | 严禁「反美颜bias投喂缺失」——模型默认美颜/柔焦 bias 是"磨皮哑光娃娃肌+全画面柔焦雾化"的直接成因（行业实测共识：塑料感的锅在提示词而非模型，须以显式纹理正词+结构化负向词压住；"完美/光滑/无瑕/beautiful"等抽象美颜词只会加重 bias，禁用其充当质感词）；凡出图提示词必须随主prompt携带统一负向词块与锁质英文锚词（见下），支持负向词字段的平台（负向词块整体放入负向字段；字段内写法按平台习惯——名词短语为稳，官方负向段惯用自然语言「不要/无…」句式者从其官方示例；同一负向字段内须分块保持单一句式、禁逐词交错混排——体系统一负向词块为名词短语块、不得改写其句式与词序，技能域补充禁项若取其惯用的「no+名词」式，须与统一块前后分列：统一块在前、域补充块在后、块内句式单一）、不支持负向字段的平台（负向词以"禁止"陈述拼于提示词末尾）一视同仁，禁省略禁截断；若平台带美颜增强/一键美颜类开关须显式关闭或注明不使用；统一负向词块（勿删词、勿挪用顺序；禁加入 no 3D / no anime / no cartoon / no CGI——与本体系3D国漫半写实CG基线自相矛盾，替代以 no 2D anime flat shading / no cel shading；投喂预算纪律：负向词逐词受注意力预算摊薄、位次越后边际效用越低（文本编码器对靠前 token 注意力更集中、多数平台另有 77 token 文本截断硬限；精简档规模以实测收益拐点为准、不设固定词数），故本全表为人物向完整基线、须成块整投禁静默截断，平台负向字段有长度上限或属语义对齐旗舰模型时改按 X12 平台适配条走实测精简档、先保已观察缺陷词；hazy foggy atmosphere 一职只压「以雾遮细节的全画面低清雾糊」，内容性雾带/雾幕/天候薄雾与空气透视介质不在其禁列——本镜需合法雾气时按 X12 与《art_scene》X15 以正向分层渲染词显式描述，正向引导为主动、负向约束为被动、冲突时正向占优，禁因本词弃写合法雾气）：plastic skin, waxy skin, airbrushed skin, beauty filter, over-smooth skin, mask-like face, smooth plastic doll skin, dead eyes, blank stare, distorted face, blurry face, soft focus, hazy foggy atmosphere, low quality, blurry, gaussian blur on subject, overexposure, flat washed-out lighting, 2D anime flat shading, cel shading, neon glow on seal, mirror specular on seal, flat black cloth slab, text, watermark, logo；无人/纯器物场景豁免（画面不含人物、皮肤、发丝、契印的场景卡与道具卡）——可改落「场景档子集」：皮肤/面容/发丝/契印类词按语义等价替换（plastic skin→plastic look、smooth plastic doll skin→plastic doll look、blurry face→blurry；mask-like face 与 distorted face 随人物一并省略），保底保留 soft focus、hazy foggy atmosphere、blurry、low quality、overexposure、flat washed-out lighting、2D anime flat shading、cel shading 八项（列举序即随主prompt的投喂序、勿自行重排，同《art_scene》X15）；画面含玉器/符印/金属/布料者于保底八项与末位之间追加 neon glow on seal、mirror specular on seal、flat black cloth slab 三项、末位固定 text、watermark、logo 三项（保底八项＋末位三项合计十一项、三项材料词就位于二者之间）；锁质锚词同步按场景档取用（仅保留 fabric weave micro-texture visible、soft drape folds、dark cloth retains value contrast and contour reflections 等器物向锚词，皮肤/发丝/瞳孔向锚词随人物一并省略）；子集清单与取用口径以《art_scene》X15 为唯一权威，场景与道具衍生手册同口径同清单并须各自显式携带；锁质英文锚词（防"no X"只拆不建——正向须同步显式立细节；subtle natural pores 为半写实CG口径可见极细毛孔、非纪实毛孔汗毛级——纪实级仍禁，同本条 X1）：skin texture visible, fine skin micro-texture, subtle natural pores, translucent SSS skin with warm undertone, individual hair strands clearly defined and countable, natural taper at hair tips, fabric weave micro-texture visible, soft drape folds, dark cloth retains value contrast and contour reflections, sharp catchlight in pupils with focused gaze, {印记英文锚词随印记锚行类型+色相联动——印记锚行落具体类型（契印/旧疤/胎记/身份标识/纹章等不限）+指定色（"X色印记"→X色对应英文锚词）时此处同落该色词与类型；印记锚行未指定色相/类型时此处为 dark jade matte seal} with subtle inner glow under 5% rim only, clearly visible, same position and shape across all four views |
 | X12 | 严禁「眼神无神空焦 bias 投喂缺失」——模型对"丹凤眼狭长微挑/冷冽清正/目光坚定"等结构词与情绪气质词易读成"细长眼+无神+空焦"（"冷"≠"空焦"、"清正"≠"空洞"、"温柔"≠"涣散"、"坚定"≠"凶"——须显式区分情绪气质与有神基线），且默认"涣散半闭无神"渲染多于"聚焦锐利有神"，是角色出图"眼神无神/看上去很累"问题的直接成因；凡含角色画面的出图提示词（人像特写/四视图/全身立像/分镜特写/大特写——含 art_character/角色衍生/分镜/分镜视频等所有含角色镜头）必须随主prompt携带统一眼神锁神锚词与配套负向词，与 X11 锁质锚词同级同投喂（支持负向词字段的平台整体放入负向字段、不支持的拼于提示词末尾以"禁止"陈述，禁省略禁截断）；锁神口径=中性基线档（角色参照图/四视图/默认态；具象可落图，杜绝软形容）——瞳孔有清晰高光落点（1-2 点钟位置、单一高光不散乱不漂移）、虹膜内透可见径向纤维纹理、眼白洁净无血丝、上眼睑紧实不下压不半闭、下眼睑微紧收、目光与镜头方向锁定 viewer eye contact、focused intense gaze 视线聚焦有压迫力；基线/状态双档——剧本/小说明示状态词（垂眸/睥睨/闭目/斜睨/含泪/怒目）时按原文落状态词为状态档、与基线档分档并存不冲突（状态≠无神空焦：垂眸须目光有落点不空洞、睥睨须目光锐利有焦点、含泪须泪光盈睫而瞳孔高光仍在、怒目须瞳仁聚光，状态档只禁"失焦空焦"不禁剧本状态本身；角色卡/四视图按基线档、分镜镜头按剧本情绪状态词取状态档）；出图验收——每张含角色画面出图后按本口径核对瞳孔高光/目光焦点，同时核对该角契印/旧疤/瞳色异象等身份特征是否在场与解剖学左右是否镜像颠倒（身份特征缺失即返工、镜像颠倒即返工——正面观中解剖学右侧印记应现于画面左侧）；统一负向词块新增（与 X11 负向词块合并投喂、勿删词勿挪用顺序、与现有 dead eyes/blank stare 互补覆盖"无神空焦"全谱）：droopy eyes, half-closed eyes, sleepy eyes, tired eyes, vacant stare, lifeless eyes, hollow gaze（本节七词序即全体系锁神软神态速记串的唯一序次基准：各手册速记一律逐字同序写作「droopy/half-closed/sleepy/tired/empty/vacant/lifeless/hollow gaze」——empty 为体系内既有补词、紧随 tired 之后，除 empty 外七项与本新增序逐字同序、勿各自另立词序）；锁神英文锚词（扩展 X11 原 sharp catchlight 一行为完整锁神串，与 X11 锁质锚词同投喂）：sharp catchlight in pupils at 1-2 o'clock position, single clear catchlight, iris with visible radial fiber texture, clear sclera no bloodshot, upper eyelid taut no droop, lower eyelid firm, focused intense gaze toward viewer, locked eye contact, alert piercing eyes；平台适配——新一代语义对齐旗舰模型（如 agnes-image-2.5-flash 类，语义对齐/复杂视觉细节为核心优化项）以正向语义对齐为强项：锁神/锁质/契印锚词一律正向主导投喂、配套负向词按实测精简至已观察缺陷（禁 30+ 长负向词堆叠稀释正向权重——契印类先用完整正向锚行投喂、禁词只列实测误渲色），正向锚词串须完整随主prompt成段投喂、禁截断 |
+
+---
+
+## 四、A/B 双面容基因档（通用模型可读 · 跨模型通用）
+
+> 本章是「面容 · 建模 · 场景 · 道具」共用的**风格基因档**，目标只有一个：让任意主流 AI 模型（中文对齐型 / 英文对齐型 / 多模态对话型 / 本地工程流）都能听懂看懂，并稳定产出同一种审美取向——而不是复刻某张参考图。设计依据（联网核验）：①风格化与写实是一条连续光谱而非二元对立（行业通行对照：风格化＝夸张比例 + 简化纹理 + 主动打光，写实＝解剖准确 + PBR 物理光照 + 毛孔皱纹级细节，两端各有恐怖谷与代入感代价）；②纯文本出图身份漂移的根因是"每一个未定义的属性都是一次抛硬币"，可控变量是可测量、解剖学具体的结构词，而非"美/帅/精致"类主观词；③跨场景一致性的工程做法是"身份锚点 + 角色设定表 + 模块化提示词 + 负向词保护面部件"，设定表要素含脸与发、服装规则、表情风格、动作风格、不可改变项、允许变化项；④东方重彩三维化的工业做法是矿物色板分区配色 + PBR 分层材质表现颜料厚度与色阶 + 弱化写实强明暗改柔和漫射光 + 平远构图与晕染层次组织光影。本章据此把"那张脸"拆成可迁移的基因，**参考图只作观感标尺、其画面内容严禁写入提示词**。
+
+### 4.0 定义、边界与三原则
+
+- **风格基因** — 指跨题材可迁移的那部分风格信息：骨相结构、风格化程度、材质语言、光影语言、色彩组织方式、造型语言。基因与"剧情锚点"分离：剧情锚点（人物身份、服饰形制、场景类型、道具设定）由角色卡/场景卡/道具卡承担，基因由本章承担，两者在提示词中分块共存、互不顶替。
+- **不写死参考图** — 参考图中的具体人物身份、服饰形制、建筑类型、事件场景，以及一次性配色叙事组合（如"某色配某纹""某色配某绣"这类只属于那张图的一体化搭配）一律不入基因词块；出现作品名/角色名/厂牌名/引擎名即判写死。
+- **档位只管处理方式、不管情绪调性** — A/B 决定"结构与材质怎么处理、光影怎么组织"，**不决定**"这场戏是明是暗、是冷是暖"。明暗冷暖一律由情绪色盘与 A-I 光影方案管辖：A 型可演夜戏与暗场、B 型可演日戏与亮场；以风格档名义绕过色盘纪律即判越权。
+- **通用模型可读三原则** — ①**结构词优先**：只用可测量、解剖学与工程学具体的词（脸型/眼型/鼻型/下颌线/粗糙度档/色温档），禁"精致/高级/氛围感/唯美"等无法解析的主观词充当风格指令；②**中英双写**：同一语义同时给中文结构词与英文结构词，使中文对齐型与英文对齐型模型皆可命中，两语不得互相矛盾；③**禁专有名词**：不出现作品名、角色名、厂牌名、引擎名与自造黑话，一律改以行业通用术语描述（半写实CG / 风格化比例 / 次表面散射 / 平远构图 / 分层粒子等）。
+
+### 4.1 双档基因对照表
+
+| 基因维度 | A 型 · 写实倾向档（realism-leaning） | B 型 · 风格化倾向档（stylization-leaning） |
+|---|---|---|
+| 光谱定位 | 半写实CG的写实半边——解剖可信为底线，风格化只做容差内微调 | 半写实CG的风格化半边——结构程式化为底线，写实只做质感兜底 |
+| 骨相落地 | 颅面按真人比例做实，三庭五眼在美化容差内微调（上庭略舒展、中庭比例稳、下庭略收），眉骨平缓、眼窝不深、颧骨平展、山根平缓不高、下颌温润收敛；骨点转折柔和连续不硬切 | 颅面在真人比例上做结构提纯，三庭五眼保留、五官体量小幅理想化（理想化幅度限于美化容差内，禁西化骨相与整容脸模板、对齐 X10）：眉骨与颧骨平面更整、鼻梁线条更挺直、下颌线更利落；骨点转折清晰可数 |
+| 五官体量 | 眼裂与虹膜接近真人尺度，眉形唇形随角色属性自然生长，面部碎结构（卧蚕/眼睑褶皱/唇珠）保留 | 眼裂体量小幅提升、虹膜高光更集中，眉形唇形线条更概括利落，面部碎结构合并简化、平面更整 |
+| 肤质层级 | 实物级——细微微纹理 + 可见极细毛孔 + 绒毛质感，暖底透出血色 | 概括级——细微微纹理保留、毛孔层级下调，皮肤观感更"整"、光泽更均匀 |
+| 发丝层级 | 单根可数、发梢自然收尖羽化、受风成束有物理分层与次级运动 | 发片分组清晰、束感更强、轮廓线更利落、飘动更整块 |
+| 材质语言 | PBR 物理通道为先（基色/粗糙度/金属度/法线分层），做旧按受力与接触逻辑分布，矿物颜料厚度与色阶可见 | 材质以体块与色阶为先（同通道参数，但更强调色阶分层、边缘光与轮廓分离），做旧做减法、磨损概括 |
+| 光影语言 | 弱化强明暗切割，以柔和漫射光组织立体，借鉴平远构图与晕染层次，光比克制 | 柔和基底保留，允许主动硬光参与造型，明暗对照更明确、轮廓光更利落、暗部层次更实 |
+| 色彩组织 | 矿物色板分区——暖区（赭石/朱砂系）与冷区（石青/石绿系）按场景职能分区，晕染过渡自然 | 传统色盘 C1-C15 内做色阶分层，同色相多级压色，色块边界更清晰 |
+| 造型语言 | 自然主义取向，细节密度高、信息量大；以"高信息量锚点"（印记/旧疤/瞳色异象/不对称发式）建立辨识度 | 抽象化取向，形体做减法、轮廓更概括；以"体块对比 + 身形剪影"建立辨识度，锚点特征做强化提纯 |
+| 适配题材 | **神族题材**——以神明/神族/仙神为主体的神话史诗叙事（神谱神战、天庭封神、神性威临），写实向叙事、需要高细节密度与神性造像质感的角色与场景 | **人族题材**——凡人修仙/宗门问道/玄幻奇幻/少年逆袭的修行燃向叙事（承热血王道谱系），风格化叙事、需要强剪影识别度与华丽奇观表现力的角色与场景 |
+| 不适用 | 禁用于要求"完全风格化/卡通化"的画面（本档仍属半写实CG基线） | 禁用于要求"完全写实/真人质感"的画面（本档仍属半写实CG基线） |
+
+> **双档观感标尺（仅作观感对标、严禁写入提示词）** — A 型·写实倾向档对标**神话题材写实向 CG**（追光动画《新神榜》系列式神话史诗写实向、眷思量式影视级写实向资产：解剖与材质近乎可信、服饰器物考据、明暗对照克制）；B 型·风格化倾向档对标**风格化美型国漫**（《完美世界》式建模与华丽特效、《斗罗大陆》《吞噬星空》式美型建模：骨相结构提纯、五官体量理想化、发片束感强、材质以色阶与边缘光为先、奇观特效体量足）。两类标尺只供出图验收时的观感比对，**作品名/厂牌名严禁进入提示词**（对齐 §4.0「不写死参考图」与「禁专有名词」两条；依据：福煦影视《完美世界》行业评价集中于"建模优秀、特效华丽"，玄机科技《斗罗大陆》《吞噬星空》以风格化美型建模见长，追光动画《新神榜》系列则以神话题材的写实向 CG 与传统美学回归著称）。
+
+### 4.2 双档基因整块投喂词块（可整段复制，中文 + 英文同投喂）
+
+**A 型 · 写实倾向档（中文词块）**
+
+半写实CG写实向，3D写实渲染管线，东方汉人骨相按解剖可信落地（眉骨平缓、眼窝不深、颧骨平展、鼻梁挺秀山根不高、下颌温润收敛），三庭五眼在美化容差内微调，五官体量接近真人尺度、面部碎结构保留，肤质细微微纹理与可见极细毛孔、暖底透出血色，发丝单根可数至发梢自然收尖羽化，PBR物理通道为先、矿物颜料厚度与色阶可见，柔和漫射光组织立体、明暗对照克制，矿物色板按场景职能分区晕染过渡，平远构图层次推进
+
+**A 型 · 写实倾向档（英文词块）**
+
+semi-realistic CG, realism-leaning, 3D physically-based rendering pipeline, East Asian Han bone structure rendered anatomy-true (soft brow ridge, shallow eye socket, flat cheekbone plane, straight slender nasal bridge with low root, gently tapered jawline), three-court-five-eye proportions within idealized tolerance, near-realistic feature scale with facial micro-forms retained, fine skin micro-texture with subtle natural pores and warm translucent SSS undertone, individually countable hair strands tapering naturally at the tips, PBR channels prioritized with visible mineral-pigment thickness and tonal gradation, soft diffuse modeling light with restrained chiaroscuro, mineral-pigment palette zoning per scene function with blended transitions, level-distance composition with layered depth
+
+**B 型 · 风格化倾向档（中文词块）**
+
+半写实CG风格化向，3D写实渲染管线，东方汉人骨相结构提纯（三庭五眼保留、五官体量小幅理想化：眼裂略长、眼距略收、鼻梁线条挺直、下颌线利落），面部平面更整、碎结构合并简化，肤质细微微纹理保留而毛孔层级下调、光泽更均匀，发片分组清晰、束感与轮廓线利落，材质以色阶分层与边缘光为先，柔和基底允许主动硬光参与造型，明暗对照明确、轮廓光利落、暗部层次实，传统色盘C1-C15色阶分层压色，构图剪影识别优先
+
+**B 型 · 风格化倾向档（英文词块）**
+
+semi-realistic CG, stylization-leaning, 3D physically-based rendering pipeline, purified East Asian Han bone structure (three-court-five-eye retained, feature scale mildly idealized: slightly elongated eye aperture, slightly tightened eye spacing, straight nasal bridge line, crisp jawline), simplified facial planes with merged micro-forms, fine micro-texture retained with reduced pore hierarchy and even sheen, clearly grouped hair strands with crisper silhouette lines, material expressed through tonal layering and rim light, soft base light allowing active hard-light shaping, definite chiaroscuro with solid shadow depth, traditional C1-C15 palette pressed into tonal layers, silhouette-first composition
+
+> **场景向与器物向词块（与人物向词块同为 4.2 的组成，非同层替代）**：以下四块为《art_scene》R14 /《art_scene_derivative》、《art_prop》R10 /《art_prop_derivative》的**强制携带项**——两张卡若声明了档位却投喂不出对应向度的整块词块，即等同 §4.5 X13 判定的"档位声明缺项"。取用纪律：**场景向只取色彩组织/材质语言/光影组织/造型语言四项**，器物向只取材质语言/色彩组织/造型语言三项，面容、五官、骨相、肤质、发丝类词一律随人物一并不落（无人空镜与静物卡无人物载体，带入即等于给模型下了一次多余的身份暗示）；词块仍守 §4.0 三原则（结构词优先、中英双写、禁专有名词），且与人物向词块同源——同一档位在人物、场景、器物三处的"处理方式"必须自洽（A 档不会出现人物写实而场景/器物转风格化）。
+> **与人向词块的分工**：人物向词块按卡面有无人物分别调用——《art_character》R16 与《art_character_derivative》R20 调人物向；《art_scene》《art_scene_derivative》《art_prop》《art_prop_derivative》《分镜》的无人空镜/静物段调场景向或器物向；分镜与分镜视频中出现人物时，人物元素另按人物向词块独立投喂（同一画面可人物向 + 场景向并投，各自成块、互不截断）。四项/三项维度口径同 §4.1 对照表"材质语言/光影语言/色彩组织/造型语言"四行，不再另立维度。
+
+**A 型 · 写实倾向档（场景向中文词块）**
+
+半写实CG写实向，3D写实渲染管线，场景按物理光照与真实构造落地；色彩组织取矿物色板分区（暖区赭石朱砂系、冷区石青石绿系按场景职能分区）、色阶过渡自然无断层；材质语言以PBR物理通道为先（基色/粗糙度/金属度/法线分层），砖石木瓦各具真实粗糙度与微观磨损、矿物颜料厚度与色阶可见；光影组织以柔和漫射光为主、弱化强明暗切割、光比克制成影、借平远构图与晕染层次推进空间纵深；造型语言取自然主义取向、结构信息量高、构件细节密度大而有序
+
+**A 型 · 写实倾向档（场景向英文词块）**
+
+semi-realistic CG, realism-leaning, 3D physically-based rendering pipeline, scene rendered with physically plausible construction and lighting; color organization using mineral-pigment palette zoning (warm ochre/cinnabar zone and cool azurite/malachite zone assigned by scene function) with natural tonal transitions and no banding; material language prioritizing PBR channels (base color, roughness, metallic, normal layers) so brick, stone, timber and tile each read with true roughness and micro-wear, with visible mineral-pigment thickness and tonal gradation; lighting organized by soft diffuse ambient modeling with restrained chiaroscuro and level-distance composition layering depth; naturalistic formal language with high structural information density and orderly construction detail
+
+**B 型 · 风格化倾向档（场景向中文词块）**
+
+半写实CG风格化向，3D写实渲染管线，场景造型做结构提纯与体块化归并；色彩组织取传统色盘C1-C15色阶分层、同色相多级压色、色块边界清晰可辨；材质语言以体块与色阶为先（同PBR通道参数，更强调色阶分层与边缘分离），做旧做减法、磨损概括为可辨色块与轮廓变化；光影组织允许主动硬光参与造型、明暗对照明确、轮廓光利落、暗部层次更实、剪影识别优先；造型语言取抽象化取向，构件形体做减法、轮廓概括、以体块对比与天际线剪影建立辨识度
+
+**B 型 · 风格化倾向档（场景向英文词块）**
+
+semi-realistic CG, stylization-leaning, 3D physically-based rendering pipeline, scene forms structurally purified and consolidated into readable masses; color organization pressing the traditional C1-C15 palette into tonal layers with multiple values per hue and clearly delimited color blocks; material language led by mass and tonal value (same PBR channel parameters, with stronger emphasis on tonal layering and edge separation), aging treated subtractively and wear summarized into legible blocks and contour shifts; lighting allows active hard light to participate in shaping with definite chiaroscuro, crisp rim light, solid shadow depth and silhouette-first reading; abstracted formal language simplifying construction volumes and generalizing contours, identifying the scene by mass contrast and skyline silhouette
+
+**A 型 · 写实倾向档（器物向中文词块）**
+
+半写实CG写实向，3D写实渲染管线，器物按真实工艺与受力逻辑落地；材质语言以PBR物理通道为先（基色/粗糙度/金属度/法线分层），金属有真实金属度与边缘磨损、玉石有次表面通透与内沁、木质有纹理走向与漆层剥落、织料有织纹与垂坠厚度；色彩组织取矿物色板分区、主色回查传统色盘C1-C15编号、降饱和不抢主体；造型语言取自然主义取向，工艺细节密度高（錾刻/花丝/铆接/包边/髹漆可辨）、做旧按接触与受力分布
+
+**A 型 · 写实倾向档（器物向英文词块）**
+
+semi-realistic CG, realism-leaning, 3D physically-based rendering pipeline, object rendered with authentic craft and force-contact logic; material language prioritizing PBR channels (base color, roughness, metallic, normal layers) so metal reads true metallic with edge wear, jade reads subsurface-translucent with internal inclusions, timber reads directional grain with flaking lacquer, textile reads weave structure with draping thickness; color organization using mineral-pigment palette zoning with principal hue traced to traditional C1-C15 swatches and desaturated so as not to overpower the subject; naturalistic formal language with high craft-detail density (chiseled, filigree, riveted, bound-edge and lacquered surfaces all legible), with aging distributed by contact and force logic
+
+**B 型 · 风格化倾向档（器物向中文词块）**
+
+半写实CG风格化向，3D写实渲染管线，器物形体做减法、体块与轮廓先立、细节分层归并；材质语言以体块与色阶为先（同PBR通道参数，更强调色阶分层与边缘光分离），做旧做减法、磨损概括；色彩组织取传统色盘C1-C15色阶分层、同色相多级压色、色块边界清晰；造型语言取抽象化取向，工艺细节提纯为可辨的大形与主图案、以体块对比与外形剪影建立辨识度
+
+**B 型 · 风格化倾向档（器物向英文词块）**
+
+semi-realistic CG, stylization-leaning, 3D physically-based rendering pipeline, object forms simplified with mass and outline established first and detail consolidated into layers; material language led by mass and tonal value (same PBR channel parameters, with stronger emphasis on tonal layering and rim separation), aging and wear treated subtractively; color organization pressing the traditional C1-C15 palette into tonal layers with multiple values per hue and clearly delimited color blocks; abstracted formal language purifying craft detail into legible primary forms and motif, identifying the object by mass contrast and silhouette
+
+### 4.3 跨模型适配表
+
+| 平台/模型类型 | 一致性主手段 | 本档基因落位 | 硬性纪律 |
+|---|---|---|---|
+| 支持角色参考与风格参考的平台（Midjourney 系） | 角色参考锁身份、风格参考锁画风、种子锁随机分布 | 基因词块落提示词主体段，参考图仅作视觉锚点 | 参考图只作锚点，其画面内容不得进文字提示词；基因词块一经取定逐字复用零变体——改一个词即等于换一次脸 |
+| 支持种子与适配器的工程流（Stable Diffusion 系 + 身份适配器） | 种子锁分布、身份适配器锁面部几何、适配器微调锁长期复用 | 基因词块作正向主体；统一负向词块入负向字段 | 锁定种子后再改基因词块＝重掷骰子；跨镜批量须沿用同一 seed 与同一身份适配器 |
+| 中文语义对齐型图像/视频平台（即梦 Seedance 系） | 五官特征词 + 材质词提稳一致性，参考图/参考视频定镜头语言；官方注明自然语言描述、无格式限制 | 基因词块落「风格/氛围」层，与镜头运动词相邻；面部特征词按 §4.1 逐项落位 | 官方虽无格式限制，仍须结构词优先；风格串跨镜头逐字复用零变体 |
+| 纯自然语言通用模型（GPT / Gemini / Flux 系多模态） | 结构化自然语言整段描述 + 参考图输入（若有参考图接口） | 基因词块作一段自足描述，顺序＝先基因、后设定、再镜头 | 禁作品名与专有名词；不可用平台参数语法；每段须自带基因词块、禁"同上"式省略 |
+| 无参考图接口、仅纯文本的降级路径 | 结构词 + 锚点特征 + 负向词三重保护 | 基因词块 + 三庭五眼结构词 + 高信息量锚点（印记/旧疤/瞳色异象/不对称发式）+ 统一负向词块 | 降级路径下"高信息量锚点"权重上调：一个可校验锚点 > 十个主观美型词；未定义项越多、漂移概率越高 |
+
+### 4.4 风格档锁定与四环继承
+
+- **建卡即锁档** — 角色卡/场景卡/道具卡在首版产出一经定档（A 或 B），写入卡片元数据，全剧不再改档；改档＝重出该卡全量资产。
+- **同片可共存、同角色不混档** — A、B 两档可在同一部片中并存（如人族修行主线走 B、神族神战副线走 A），但同一角色/场景/道具不得跨档漂移；双题材并存的片按**主线题材**锁全片基调（次要题材线仅该线角色与其专属场景/道具可另档），并在线别元数据显式标注题材归属以防跨线串档（对齐本节「定档判据」先判作品级题材的判定顺序）。
+- **四环逐级继承** — 角色 → 角色衍生（妆容服化） → 分镜（逐镜画面词） → 分镜视频（风格标签），四环必须继承同一档位代号，任一环缺失档位代号即判不合格。
+- **定档判据（先判据、后锁档）** — 档位不是默认值，须按下列线索**加权判定**，判据命中结果与命中项一并写入卡片元数据（留痕可复核）。判定顺序为「**先判作品级题材、再判角色级线索**」：题材映射为首要线索、其命中票**按两票计**（其余线索各一票），因为题材决定了全片的建模与特效基调——**人族修仙/玄幻/奇幻题材落 B 型**（风格化美型建模，行业代表为《完美世界》式建模与华丽特效、《斗罗大陆》《吞噬星空》式美型建模），**神族神话题材落 A 型**（写实向神性造像，行业代表为追光动画《新神榜》系列式神话题材写实向 CG；两档观感标尺与"作品名严禁入提示词"的纪律见 §4.1 表后说明）；题材线索与角色级线索冲突时**以题材线索为准**（如神族题材中的凡人侍从随题材落 A、人族修仙题材中的伪神反派随题材落 B），防同一部片内因个别角色而整体基调摇摆。判定口径：A 权重多者落 A、B 权重多者落 B；权重持平或无线索可依 → 先看题材线索，题材亦不明 → 兜底 A 型，并在卡片标注「档位待人工复核」。**禁以单一角色标签词直接定档**（如仅凭某角色台词出现"神族"三字落 A）：题材判定须基于作品级题材定位、不得因个别字样改判题材；族属常以未直呼其名的方式书写（"承血者/旧朝余脉/天枢阁/堕神残裔"等），必须按语义判、不得按字面判。
+
+| 判据线索 | A 型倾向 | B 型倾向 |
+|---|---|---|
+| **题材映射（首要线索、按两票计）** | **神族题材**：以神明/神族/仙神为主体的神话史诗叙事（神谱神战、天庭封神、神性威临、神性造像取写实向） | **人族题材**：凡人修仙/宗门问道/玄幻奇幻/少年逆袭的修行燃向叙事（承热血王道谱系、取风格化美型建模与华丽奇观表现） |
+| 族属/血脉 | 神明、神族、仙神血统与神性传承（神族叙事主体） | 凡人世家、人族宗门、异质血脉、契印寄生、妖族/魔族/鬼域 |
+| 叙事写法 | 写实向、情绪戏、生活流、考据向、神话史诗感 | 写意向、奇观向、强造型、设色化、热血燃向 |
+| 视觉设定 | 礼制化服饰、材质考据、神性造像（宝相庄严、神性纹章），无异质体征（单一印记/契印/旧疤等**标记类**特征按 §一 默认墨玉口径落词，不单独构成 B 判据） | 异化体征、体表契印**主导造型**、非人结构——均指角色**自身形体层面**的异质特征；神性金光/能量外显/霞光属**特效层**，由 A-I 光影方案承担（神性段落落 H 神性降临），不单独构成 B 判据 |
+| 镜头语言 | 细腻情绪戏、长镜、缓推缓摇 | 奇观展示、强运镜、剪影与体块对比 |
+
+- **档位来源与继承链（下级不自立档，全局唯一源头是角色卡）** — 场景卡/道具卡与三本衍生卡均不自立档位，一律锚定继承，并在元数据显式标注来源：
+  - 归属明确（某角色的居所、法器、本命物、随身物、衣饰）→ 继承该**角色卡**档位，来源标注「继承自 {角色名} 卡」。
+  - 族属/门派/势力共用（神殿、宗祠、族徽、山门、宗门建筑群、制式法宝）→ 继承该族系/门派**首例卡（首座卡）**档位，来源标注「继承自 {族系/门派} 首例卡」，防族相漂移。
+  - 纯功能性中性场景/道具（荒野、客栈、市集、通用器皿，不含族属设定）→ 取同镜出场角色档位；同镜无角色出场 → 兜底 A 型。
+  - 分镜与分镜视频不自行定档，逐镜继承该镜出场角色卡与场景卡档位；同镜多角色跨档时，**画面风格以该镜主体角色档位为准，其余角色保留各自面容基因**（面容各归其卡、画面风格归主体），不得因并置而互相污染。
+  - 执行顺序锁定为「**先定档 → 再落词块 → 再出图**」；出图前须先产出「档位与来源清单」（卡名 → 档位 → 来源），清单缺来源项即判不合格、先补齐再出图。此项落位纪律的判定，见 §4.5 R13/R14 与 X16/X17。
+- **本档不改既有纪律** — 本章不替代、不放宽任何既有条款：色盘 C1-C15 与情绪色盘、A-I 光影方案、R/X 全表、统一负向词块与锁质/锁神锚词一律继续生效；本章只在"结构处理方式与材质光影组织方式"这一层追加档位变量。
+
+### 4.5 本章必守与严禁（续全局编号）
+
+> **编号作用域声明**：本手册 R/X 编号（R1-R14 / X1-X17）为**全局序列**；各承载手册（《art_character》《art_character_derivative》《art_scene》《art_scene_derivative》《art_prop》《art_prop_derivative》《分镜》等）各自另有一套**局部序列**，数字可能与本手册重合。跨手册引用时**必须带手册名限定**（"全局前缀 X15"指本手册、"《art_scene》X15"指场景手册），裸编号只在同一手册内部成立。凡本手册新增条与某手册局部条数字相同时，以"全局前缀"前缀为唯一区分标识、不作为冲突处理。
+
+**必守（续）**
+
+| 编号 | 规则 |
+|---|---|
+| R10 | 凡含角色的技能与注入片段（角色/角色衍生/分镜/分镜视频）必须在提示词中显式声明面容基因档代号（A 型·写实倾向档 / B 型·风格化倾向档）并携带 §4.2 对应**人物向**整块基因词块（中文与英文同投喂）；场景卡与场景衍生取 §4.2 **场景向**词块、道具卡与道具衍生取 **器物向**词块（分别由《art_scene》R14、《art_prop》R10 落地）；无人空镜与静物卡不得回填人物向词块，同一画面可人物向＋场景向并投、各自成块互不截断 |
+| R11 | 基因词块与档位代号一经取定，跨镜/跨卡/跨片逐字复用零变体；档位代号须写入卡片元数据并在下游技能逐级继承，四环缺环即判不合格 |
+| R12 | 基因描述必须"结构词优先 + 中英双写 + 禁专有名词"三原则齐备；参考图只作观感标尺，不得写入文字提示词 |
+| R13 | 定档必须先经判据——按 §4.4「定档判据」加权判定（**题材映射为首要线索、按两票计**：人族修仙/玄幻/奇幻题材落 B 型、神族神话题材落 A 型），命中项与加权结果随卡片元数据留痕；禁以单一角色标签词直接定档、禁无判据的默认落档 |
+| R14 | 档位来源必须显式标注——场景卡/道具卡/三本衍生卡/分镜/分镜视频的档位须标注来源（继承自哪个角色卡或族系首例卡）；出图前"档位与来源清单"须齐备，缺来源项即判不合格 |
+
+**严禁（续）**
+
+| 编号 | 严禁 |
+|---|---|
+| X13 | 把参考图写死——将参考图中的具体人物身份、服饰形制、建筑类型、事件场景，或一次性配色叙事组合（如"某色配某纹/某色配某绣"之类只属于那张图的一体化搭配）当作风格基因写入提示词，或直接落作品名/角色名/厂牌名/引擎名 |
+| X14 | 以主观美颜/氛围词充当风格指令（"精致/高级/氛围感/唯美/电影感"等无法解析的词顶替结构词），或以模糊词充当面容描述（"美/帅/好看/漂亮"对模型无指令意义，只会加重平均脸倾向） |
+| X15 | 档位混用与调性越权——同一角色/场景/道具跨镜换档（A↔B 漂移），或以风格档取代情绪色盘与 A-I 光影方案去决定画面明暗冷暖（档位只管处理方式、不管情绪调性） |
+| X16 | 无判据定档或判据未留痕——按默认值落档却登记为"已定档"、或卡片元数据只写档位代号不写判据命中项（判不了的要显式登记"档位待人工复核"，禁沉默兜底冒充判定结果） |
+| X17 | 档位来源缺失或与来源卡不符——场景/道具/衍生卡自造档位不与所属角色卡或族系首例卡对齐、来源标注空缺、或同镜多角色跨档时互相污染面容基因 |
+
+### 4.6 负向词与锚词的投喂预算纪律（跨平台）
+
+- **总量与结构分层** — 统一负向词块按三层组织投喂，禁"一句不留全表倾倒"：**保底层（必投，约 6-8 个）**只放结构失败类词（塑料感/建模粗糙/低质量/模糊/柔焦/2D 平涂与赛璐璐着色——对应本表词块中的 plastic look, rough modeling, low quality, blurry, soft focus, 2D anime flat shading, cel shading）；**域层（按题材投）**放该域高发误渲对象（人物域、器物域的 neon glow on seal / mirror specular on seal / flat black cloth slab 等）；**增补层（按实测投）**只放单卡/单镜实测出的特有缺陷。负面约束的有效性随条数增长递减，过量会从"排除缺陷"翻转为"过度纠正、画面发板"——把有限的约束额度留给最致命的几项，比铺满全表更有效。
+- **正负配比** — 单条提示词内正向结构词与负向词的数量比宜落在 3:1-4:1（本体系推荐值、非平台硬限）；负向词明显多于正向结构词时，先补正向结构词，而不是继续加负向词。
+- **字符预算** — 遵守平台配额（如可灵系正负各 2500 字符、独立配额）。**裁剪顺序设计成"从尾部裁"**：保底层置于词块最前、域层次之、增补层最后；超预算时先裁增补层、再裁域层，**保底层不动**。
+- **与 X11 的关系（不冲突）** — X11「整块附带、禁省略禁截断」约束的是**投喂动作**（成块搬运、不得手改词序与语义）；本节约束的是**总量预算与分层裁剪优先级**（裁剪有先后、不是随手删）。两者叠加执行：整块取用 → 按层落位 → 超限时按优先级裁尾。
+- **锚词不参与裁剪** — 锁质锚词与锁神锚词属正向必投项，不算负向预算，禁因压缩长度而删锚词。
+
+### 4.7 锁定项与可变量分栏（身份—服化—镜头—状态 四层可变性）
+
+本表把体系内既有的"不漂移"要求显式分层，并**首次定义每层允许变化的量**——只锁不松会让分镜拒绝换姿态，只松不锁会跨镜换脸，两者都是不合格。（与 X14/X15 不冲突：本表只管"哪一层能变"，不管画面调性。）
+
+| 层 | 锁定项（零变体，跨镜跨卡逐字复用） | 允许变化项（每镜/每卡可变，但须显式写出） |
+|---|---|---|
+| L-身份层（角色卡） | 骨相与三庭五眼、脸型轮廓、五官形制与比例、眼型与瞳色、发际线与发色发质、身形与头身比、可校验锚点（印记/旧疤/瞳色异象/不对称发式）、年龄呈现档 | 本层全锁，无允许变化项 |
+| L-服化层（角色衍生） | 面容基因与全部身份锚点（禁改） | 妆容、发型束式、服制、配饰、戏用状态（损伤/染血/湿身/蒙尘）、季节与场合变体 |
+| L-镜头层（分镜） | 身份层与服化层已锁定项、档位代号 | 景别、机位角度、视高、透视、构图、镜头运动、焦点位置与景深 |
+| L-状态层（分镜/分镜视频） | 身份层 | 情绪、姿态、动作、视线方向、口型与呼吸、环境氛围、光照方案、色盘归属 |
+
+- **双向纪律** — 锁定项零变体；可变量**逐镜必须变**——连续两镜复制同一景别+同一机位+同一姿态＝复制粘贴，不算分镜（对齐《分镜表叙事手法》重复镜判定）。同时禁以"追求变化"为由改动锁定项（那是换脸，非变化）。
+- **未定义即掷骰** — 凡未列入本表锁定项列的属性，一律视为可变量；可变量若在该镜提示词中未显式给出，则由模型自由发挥，等同未定义。此条与 §4.0「每一个未定义的属性都是一次抛硬币」互为表里。
+
+## 五、未列元素推演条（Fallback · 全体系通用）
+
+> **立据与适用（2026-09 联网核验）** — 本体系的知识结构是**"闭集编号 ＋ 开放属性"**：色盘 C1-C15、全局 R1-R14/X1-X17、A-I 光影方案、锁质/锁神锚词表、平台时长与帧数额度为**闭集**（只减不增），而剧本/设定中出现的元素是**开放集**——必会出现手册未列之物。故设本节：**未列元素一律不许新增编号，须按下方四步推演落到既有编号上，并登记推演来源**。本节**不新增全局 R/X 编号**；违反本节按既有分项归责（推演不登记＝对齐 X16「判据未留痕」；新造色名或自定义 hex＝X2；越过锁定项＝§4.7 双向纪律）。本节随本前缀注入即自动生效，各承载手册无需重写、按名引用即可。
+
+| 步 | 动作 | 落词与留痕要求 | 外部依据（联网核验） |
+|---|---|---|---|
+| **① 属性识别** | 把未列元素拆成**属性**（五行属性／神性·幽冥·魔道／境界档／材质类属），按本册「二、全局色彩盘」的「玄幻专有语汇色盘映射」回查 C 编号 | 属性词与实体词**同句紧邻、逐项绑定**；色相只落 C 编号，禁自定义 hex、禁荧光霓虹（对齐 X2） | 属性绑定失败研究：组合式提示中描述性属性会串到相邻实体（"a green bench and a red car" 中 car 误吸 green），根因是文本嵌入层对组合式提示不最优（Zarei 等，arXiv:2406.07844）；分区/紧邻绑定（Regional·Attention Couple 一类）证明显式绑定可改善属性归属——本体系据此取"属性与实体显式绑定"的落词纪律 |
+| **② 就近类推** | 属性在映射表无直配时，取**同族／同属性／同境界档**的既有条目类推（新焰体族→「黑金焰／魔焰」条；新阵纹→「黑金阵纹／魔道阵纹」条） | **必须登记类推来源**（相似项编号 ＋ 一句理由）；无登记视为未推演 | 本体推理：对不完整本体中的缺失概念，按既有类层次做归属预测（subsumption）并留下推断链（NeurOWL，arXiv:2607.15776；ontology reasoning 通例） |
+| **③ 落默认值** | ①②皆无对应时，落**文中已存在的默认值**（印记类默认 dark jade matte seal；档位默认 A 型兜底；四视图背景 #B8B8B8；未指定表情＝中性），并**显式写出该默认值** | 禁留空、禁"交给模型自由发挥"；默认值必须是本体系已有的，不得现造 | 模板工程通例：欠定义变量＝模型自行发挥、方差不可控（对齐本册 §4.0／§4.7「每一个未定义的属性都是一次抛硬币」）；实践要求在无值时给出**确切兜底串**以保证格式一致；组件层只消费既有别名、缺省时回退全局值（Ant Design Seed→Map→Alias 三层：组件不下沉新造值） |
+| **④ 越界转人工** | 推演一旦触到**锁定项／配额封顶／X 禁则／平台时长与帧数额度**，立即停止推断，标注"待人工确认" | 报错不静默替代；禁以"通用化"为由绕过红线或改动锁定项 | Design Tokens 规范：不可解析引用、循环引用、类型不符均为**必须报错**的条件，规范不给替代值、不得静默顶替（外部规范：W3C Design Tokens Format Module 2025.10「Alias/引用类型」条）；封闭世界假设（未记录且不可推导者不成立）＋ 预定义升级触发条件（AI→人工转交实践） |
+
+**留痕登记（推演走 ②③ 时随卡落元数据；缺登记即不合格）：**
+
+| 登记项 | 填写内容 |
+|---|---|
+| 元素原文词 | 剧本/设定原词（禁改写） |
+| 属性判定 | 属性拆分结果（五行／神性·幽冥·魔道／境界档／材质类属） |
+| 落点编号 | 回查到的 C/R/X 编号或锚词 |
+| 类推来源 | ②步的相似项编号＋理由；③步填默认值来源 |
+| 越界标记 | "无"／"待人工确认：{越界项}" |
+
+**示例（全部落在既有编号内，零新增编号）：**
+
+| 未列元素 | ① 属性识别 | ②③ 落点 | 越界 |
+|---|---|---|---|
+| 九幽血蛟阵 | 火／血 ＋ 阵 | 焰体族类推「黑金焰／魔焰」条（亮焰芯 C3·C15 ＋ 烟层 C6 ＋ 勾边 C5、分层呈现禁整片死黑）；阵纹类推「黑金阵纹」条（纹线 C5／底纹 C6），并按《分镜表国风3D约束》结构锚点条件坐标级锁定、跨镜同形同纹 | 无 |
+| 玄冰噬魂蛊 | 冰 ＋ 册内无此实体类 | 冰系落 C12 群青 ＋ C1 月白 ＋ C4 靛蓝影部；实体类走原文落词路径（按《art_character》规则7 原文落词＋精确部位＋材质词、独立成锚行），不新增造型规则；"噬魂"若为攻击特效，回查特效 ±20% 容差、不污染 L1 主色 | 无 |
+| 某新平台 30s 短剧 | — | 不在本体系推演范围：时长与帧数额度以《分镜视频》为权威 | **是（待人工确认）** |
+
+- **必守** — 四步按序执行；②③步必登记来源；默认值取文中既有；越界即停、报错不静默替代；推演结果与原文/锁定项冲突时，**原文与锁定项优先**。
+- **严禁** — 以"未列"为由新增编号、色名或自定义 hex；跳过留痕直接落词；以"通用推演"为名绕过 X 禁则、配额封顶与平台额度；把可推演项与"是决定而非推论"的项（配额/逐字一致性/红线）混为一谈。
